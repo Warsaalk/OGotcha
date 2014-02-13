@@ -1,0 +1,93 @@
+/*** Kokx layout restyled by Warsaalk ***/
+/*** General styles ***/
+* { padding: 0; margin: 0; font-family: Tahoma,Helvetica; font-size: 13px; }
+body { background: #06090e url('../img/bg.png') top center repeat; color: #ddd; }
+a { color: #ddd; }
+h1 { font-size: 25px; }
+h2 { font-size: 19px; }
+select,
+input,
+textarea{ border: 0; padding: 5px; background: #000; color: #ddd }
+
+/*** Main container ***/
+#main-container{ width: 950px; margin: 0 auto 20px; }
+	
+	/*** Language styles ***/
+	#lang-en{ margin-left: 10px; }
+	.lang {	float: left; background: #161920; }
+	.lang-selected{	background: #252e37; }
+		.lang a { display: block; padding: 0 15px 10px; text-align: center; text-decoration: none; color: #ddd; }
+		.lang a:hover{ background: #576d7b; }
+	
+	/*** Add style ***/
+	#adsense{ float: right; width: 728px; }
+	
+	/*** Header style ***/
+	#header{ margin: 30px 0; }
+		#header h1 { display: inline-block; line-height: 41px; }
+		#agslord { float: right; background: #161920; width: 275px; height: 41px; line-height: 40px; cursor: pointer; font-weight: bold; text-align: center; }
+			#agslord a { font-size: 1.3em; display: block; }
+			#agslord a:hover { background: #576d7b; }
+	
+	/*** Invalid cr styles ***/
+	#cr-invalid{ width: 950px; padding-bottom: 10px; margin: 0 auto; }
+		#cr-invalid #red{ background-color: #F0947B;	padding: 5px; height: 30px; }
+			#cr-invalid #red div{ line-height: 30px; vertical-align: middle; float: left; }
+			#cr-invalid p{ font-weight: bold; margin-left: 10px; color: #cf1b27; }
+			#cr-invalid img{ height: 30px; width: 30px; border: 0; }
+	
+	/*** Cr containt styles ***/
+	.cr-textareas{ width: 400px; padding: 30px; background: #161920; }
+		.cr-textareas textarea{ width: 400px;	border: 0; }
+	#cr-left{ float: left; }
+	#cr-right{ float: right; }
+			#cr-title span{ line-height: 26px; font-weight: bold; }
+			#cr-title input{ border: 0; float: right; }
+		#cr-left textarea{ height: 350px;}
+		#cr-right textarea{ margin-top: 10px; height: 314px; }
+	
+	/*** Submit cr styles ***/
+	#submit-container{ margin: 10px 0; }
+		#submit-container #goto-preview { float: right; margin-top: 10px; }
+			#submit-container a { text-decoration: none }
+			
+		#submit-container a,
+		#submit-container input{ border: 0; background: #161920; padding: 10px; cursor: pointer; font-weight: bold; }
+		#submit-container a:hover,
+		#submit-container input:hover{ background: #576d7b; }
+		
+	/*** Options styles ***/
+	#options-container{ margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
+		#options-container .option{ padding: 20px; margin: 0 0 10px; background: #252e37; }
+			#options-container .option #option-table{ width: 850px; margin-top: 10px; }
+			#options-container .option textarea{ margin-top: 20px; border: 0; width: 850px; }
+			
+	/*** Preview styles ***/
+	#preview-container{ margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
+	
+	footer { margin: 0 auto; width: 950px; padding-bottom: 20px; }
+
+.info{ padding-bottom: 10px; }
+	.info .information,
+	.info .success,
+	.info .warning,
+	.info .error { padding: 5px; height: 32px; -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.2); -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.2); box-shadow: 0 2px 3px rgba(0,0,0,0.2); }
+	.info .information{ background: #76afdc; }
+	.info .success{ background: #8ec641; }
+	.info .warning{ background: #fddb55; }
+	.info .error{ background: #F0947B; }
+		.info .information div,
+		.info .success div,
+		.info .warning div,
+		.info .error div{ line-height: 32px; vertical-align: middle; float: left; }
+		.info p{ font-weight: bold; margin-left: 10px; }
+		.info .information p,
+		.info .success p { color: #fff; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+		.info .warning p ,
+		.info .error p { color: #222; text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3); }
+		.info img{ height: 32px; width: 32px; border: 0; }
+	
+.clear { clear: both; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
