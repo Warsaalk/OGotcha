@@ -28,3 +28,8 @@ $view = new View( $main ); //Create view
 $renderd = $view->render(); //Render view
 
 echo $renderd; //Echo view 
+
+/*
+ * http://pastebin.com/Fg1uhvU4 - Dutch
+ * http://pastebin.com/1xzDcJm4 - English
+ */

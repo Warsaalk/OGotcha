@@ -5,7 +5,11 @@ $regexes['print'] = '[^[:print:]]';
 $regexes['fuel'] = '([0-9.]*?) Deuterium';
 
 //Raid Regex
-$regexes['advanced_raid'] = 'De aanvaller heeft het gevecht gewonnen\! De aanvaller steelt ([0-9.]*) '; //TODO:: Fix
+$regexes['advanced_raid'] = 'The attacker has won the battle\!';
+$regexes['advanced_raid'] .= '\s*He captured ([0-9.]*) metal, ([0-9.]*) crystal and ([0-9.]*) deuterium\.';
+$regexes['advanced_raid'] .= '\s*The attacker lost a total of ([0-9.]*) units\.';
+$regexes['advanced_raid'] .= '\s*The defender lost a total of ([0-9.]*) units\.';
+$regexes['advanced_raid'] .= '\s*At these space coordinates now float ([0-9.]*) metal and ([0-9.]*) crystal\.';
 $regexes['simple_raid'] = '([0-9.]*) metal, ([0-9.]*) crystal and ([0-9.]*) deuterium';
 
 //Harvest Regex

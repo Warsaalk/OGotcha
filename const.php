@@ -1,17 +1,17 @@
 <?php
-define( '__VERSION'			, '2.0.3 (Modified by Vii & Warsaalk)'		);
-define( '__BASE'			, '/Github/kokx-converter/'					);
+define( '__VERSION'		, '2.0.3 (Modified by Vii & Warsaalk)'		);
+define( '__BASE'		, '/git/ogame-converter/'			);
 define( '__BASE_URL'		, 'http://'.$_SERVER['HTTP_HOST'].__BASE 	);
 define( '__TEMPLATE' 		, 'app/tpl/' 		);
 define( '__DICTIONARY' 		, 'app/dict/' 		);
-define( '__DATA' 			, 'app/data/' 		);
+define( '__DATA' 		, 'app/data/' 		);
 define( '__MODULES' 		, 'app/modules/'	);
 define( '__CLASS_PATH' 		, 'lib/class/'		);
-define( '__MODEL' 			, 'lib/model/' 		);
-define( '__VIEW' 			, 'lib/view/' 		);
-define( '__IMAGES'			, 'app/img/'		);
-define( '__JAVASCRIPT'		, 'app/js/'			);
-define( '__CSS'				, 'app/css/'		);
+define( '__MODEL' 		, 'lib/model/' 		);
+define( '__VIEW' 		, 'lib/view/' 		);
+define( '__IMAGES'		, 'app/img/'		);
+define( '__JAVASCRIPT'		, 'app/js/'		);
+define( '__CSS'			, 'app/css/'		);
 
 $phpExt 		= '.php';
 $modelExt 		= '.model'	. $phpExt;

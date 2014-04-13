@@ -33,14 +33,14 @@ class Default_Service_CombatReport
 {
 
     protected	$_themes = array(
-					'kokx'         => 'kokx',
-					'kokx-nolines' => 'kokx-nolines',
-					'tsjerk'       => 'Albert Fish',
-					'virus'        => 'ViRuS',
-					'nexus'        => 'Nexus',
-					'vii'          => 'Vii'
-				),
-				$_data = array();
+		'kokx'         => 'kokx',
+		'kokx-nolines' => 'kokx-nolines',
+		'tsjerk'       => 'Albert Fish',
+		'virus'        => 'ViRuS',
+		'nexus'        => 'Nexus',
+		'vii'          => 'Vii'
+	),
+	$_data = array();
 				
 	private $_main, $_report, $_settings, $_regex;
 	

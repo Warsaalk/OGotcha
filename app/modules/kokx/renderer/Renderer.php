@@ -171,8 +171,8 @@ class Default_Renderer_Renderer
 
         $this->data->totalRaids = $this->_report->getMetal() + $this->_report->getCrystal() + $this->_report->getDeuterium();
         foreach ($this->_report->getRaids() as $raid) {
-            $this->data->totalRaids += $raid->getMetal() + $raid->getCrystal() + $raid->getDeuterium();
-			$this->data->raidDeutRes += $raid->getDeuterium();
+        	$this->data->totalRaids += $raid->getMetal() + $raid->getCrystal() + $raid->getDeuterium();
+		$this->data->raidDeutRes += $raid->getDeuterium();
         }
         
         // Fuel costs
@@ -187,7 +187,7 @@ class Default_Renderer_Renderer
                  . $this->render('lossesmoon')
                  . $this->render('debris')
                  . $this->render('summary')
-				 . $this->render('advancedsummary');
+		 . $this->render('advancedsummary');
     }	
 	
 	public function colorNumber($number, $color = '')

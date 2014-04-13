@@ -92,25 +92,16 @@ class Kokx_Reader_Raid
          * Advanced method
          */
         $advancedSource = preg_replace( '/'.$regexes["print"].'/', ' ', $source);
-        print_r($advancedSource);
         
         $advancedRegex  = $regexes['advanced_raid'];
-        //$advancedRegex .= 'De aanvaller heeft een totaal van ([0-9.]*) eenheden verloren\. ';
-        //$advancedRegex .= 'De verdediger heeft een totaal van ([0-9.]*) eenheden verloren\.';
-        
-        //$advancedRegex .= 'Op deze cordinaten in de ruimte zweven nu ([0-9.]*) metaal en';
-        //$advancedRegex .= '([0-9.]*) kristal\.';
-
         $advancedMatches = array();
         preg_match_all('/' . $advancedRegex . '/i', $advancedSource, $advancedMatches, PREG_SET_ORDER);
-        print_r($advancedMatches);
         /**
          * Simple method
          */
         
-        $regex = $regexes['advanced_raid'];
+        $regex = $regexes['simple_raid'];
         $matches = array();
-        
         preg_match_all('/' . $regex . '/i', $source, $matches, PREG_SET_ORDER);
         
         if (count($advancedMatches) > 0) {
