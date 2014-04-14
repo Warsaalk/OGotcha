@@ -7,7 +7,7 @@ h1 { font-size: 25px; }
 h2 { font-size: 19px; }
 select,
 input,
-textarea{ border: 0; padding: 5px; background: #000; color: #ddd }
+textarea{ border: 0; padding: 5px; background: #000; color: #ddd; }
 
 /*** Main container ***/
 #main-container{ width: 950px; margin: 0 auto 20px; }

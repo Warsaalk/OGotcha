@@ -8,14 +8,12 @@ class View{
 	
 	public function __construct( $main ){
 		
-		$this->tpl 	= new stdClass;
-		$this->main = $main;
+		$this->tpl = new stdClass;
+		$this->main= $main;
 		
-		$this->_vars['scripts_top']		= '';
+		$this->_vars['scripts_top']	= '';
 		$this->_vars['scripts_bottom']	= '';
-		
-		$this->addCSS( __CSS.'main.css' );
-		
+				
 	}
 		
 	public function set_value( $key, $value ){
@@ -29,6 +27,10 @@ class View{
 	public function merge( $array ){
 		$this->_vars = array_merge( $this->_vars, $array );	
 	}	
+	
+	public function makeAnchor( $name ){
+		return $_SERVER['REQUEST_URI'] . '#' . $name;
+	}
 	
 	public function addScript( $script, $place='top' ){
 		if( isset($this->_vars['scripts_'.$place]) )
@@ -59,6 +61,15 @@ class View{
 		return false;
 	}
 	
+	public function getGoogleAnalytics(){
+		return $this->main->getGoogleAnalytics();
+	}
+	
+	public function hasGoogleAnalytics(){
+		if( count( $this->main->getGoogleAnalytics() ) > 0 ) return true;
+		return false;		
+	}
+	
 	public function getDict(){
 		return $this->main->getDict();
 	}
@@ -69,13 +80,14 @@ class View{
 	
 	public function render(){
 				
-			$this->tpl->info 	= Parser::parse( $this, 'info' );
-			$this->tpl->head 	= Parser::parse( $this, 'head' );
-			$this->tpl->footer 	= Parser::parse( $this, 'footer' );	
-			$this->tpl->page 	= Parser::parse( $this, $this->main->getPage() );
-	
-				
-			return Parser::parse( $this, 'base' );
+		$this->tpl->info 		= Parser::parse( $this, 'info' );
+		$this->tpl->googleAnalytics 	= Parser::parse( $this, 'googleanalytics' );
+		$this->tpl->head 		= Parser::parse( $this, 'head' );
+		$this->tpl->footer 		= Parser::parse( $this, 'footer' );	
+		$this->tpl->page 		= Parser::parse( $this, $this->main->getPage() );
+
+			
+		return Parser::parse( $this, 'base' );
 	
 	}
 }

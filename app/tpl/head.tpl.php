@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 		
-		<title><?= $self->getDict()->getVal("Kokx's OGame CR converter") ?></title>
+		<title><?= $self->getDict()->getVal("OGotcha") ?></title>
 		<?= $self->get_value('css'); ?>
 		<?= $self->get_value('scripts_top'); ?>
 	</head>

@@ -9,6 +9,11 @@ $lang["Convert"] = "Convert";
 $lang["Preview"] = "Preview";
 $lang["Bad Cr"] = "There is something wrong with the combat report, check if it's complete and/or you choose the correct language!";
 
+$lang['Title Placeholder'] = 'Here comes the title of the converted CR';
+$lang['Result Placeholder'] = 'Here comes the converted CR';
+
+$lang['OGotcha'] = 'OGotcha CR converter';
+
 #: data/translate/ids/ships.php:32
 $lang["Small Cargo"] = "Small Cargo";
 

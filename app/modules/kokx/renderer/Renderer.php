@@ -163,7 +163,7 @@ class Default_Renderer_Renderer
     public function _renderResult()
     {
         $this->data->totalDebris = 0;
-		$this->data->raidDeutRes = 0;
+	$this->data->raidDeutRes = 0;
 
         foreach ($this->_report->getHarvestReports() as $hr) {
             $this->data->totalDebris += $hr->getMetal() + $hr->getCrystal();
@@ -176,7 +176,7 @@ class Default_Renderer_Renderer
         }
         
         // Fuel costs
-		$this->data->totalFuel = 0;
+	$this->data->totalFuel = 0;
         if ($this->_report->getDeuteriumCosts() > 0) {
                 
                 foreach ($this->_report->getDeuteriumCosts() as $fuel) {
