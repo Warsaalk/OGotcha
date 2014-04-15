@@ -38,7 +38,7 @@ class View{
 		else
 			$this->_vars['scripts_'.$place] = "";
 			
-		$this->_vars['scripts_'.$place] .= '<script type="text/javascript" src="'. $script .'"></script>';
+		$this->_vars['scripts_'.$place] .= '<script type="text/javascript" src="'. __JAVASCRIPT . $script .'"></script>';
 	}
 	
 	public function addCSS( $css, $cond=false ){
@@ -48,7 +48,7 @@ class View{
 			$this->_vars['css'] = "";
 		
 		if( $cond !== false )	$this->_vars['css'] .= '<!--[if '. $cond .']>';
-								$this->_vars['css'] .= '<link rel="stylesheet" type="text/css" href="'. $css .'" media="screen" />';
+								$this->_vars['css'] .= '<link rel="stylesheet" type="text/css" href="'. __CSS . $css .'" media="screen" />';
 		if( $cond !== false ) 	$this->_vars['css'] .= '<![endif]-->';
 	}
 	

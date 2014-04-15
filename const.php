@@ -1,5 +1,5 @@
 <?php
-define( '__VERSION'		, '2.0.3 (Modified by Vii & Warsaalk)'		);
+define( '__VERSION'		, '3.0.0 &beta;'	);
 define( '__BASE'		, '/git/ogame-converter/'			);
 define( '__BASE_URL'		, 'http://'.$_SERVER['HTTP_HOST'].__BASE 	);
 define( '__TEMPLATE' 		, 'app/tpl/' 		);
@@ -22,19 +22,19 @@ $dataExt 		= '.data'	. $phpExt;
 $dictExt 		= '.dict'	. $phpExt;
 $moduleExt 		= '.module'	. $phpExt;
 
-include __CLASS_PATH	. 'lang'			. $classExt;
-include __CLASS_PATH	. 'page'			. $classExt;
-include __CLASS_PATH	. 'info'			. $classExt;
-include __CLASS_PATH	. 'debug'			. $classExt;
+include __CLASS_PATH	. 'lang'	. $classExt;
+include __CLASS_PATH	. 'page'	. $classExt;
+include __CLASS_PATH	. 'info'	. $classExt;
+include __CLASS_PATH	. 'debug'	. $classExt;
 
 //include __DATA			. 'properties'		. $dataExt;
 
-include __MODEL 		. 'connector'		. $modelExt;
-include __MODEL 		. 'validator'		. $modelExt;
-include __MODEL 		. 'formmanager'		. $modelExt;
-include __MODEL 		. 'dictionary'		. $modelExt;
-include __MODEL 		. 'store'			. $modelExt;
-include __MODEL 		. 'main'			. $modelExt;
+include __MODEL 	. 'connector'	. $modelExt;
+include __MODEL 	. 'validator'	. $modelExt;
+include __MODEL 	. 'formmanager'	. $modelExt;
+include __MODEL 	. 'dictionary'	. $modelExt;
+include __MODEL 	. 'store'	. $modelExt;
+include __MODEL 	. 'main'	. $modelExt;
 
-include __VIEW 			. 'parser'			. $viewExt;
-include __VIEW 			. 'view' 			. $viewExt;
+include __VIEW 		. 'parser'	. $viewExt;
+include __VIEW 		. 'view' 	. $viewExt;

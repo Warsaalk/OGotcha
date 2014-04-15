@@ -26,7 +26,7 @@ $main->handleModule( 'KokxModule' ); //Name of module class
 $main->addGoogleAnalytics( 'UA-46271379-4' );
 		
 $view = new View( $main ); //Create view 
-$view->addCSS( __CSS.'main.css' );
+$view->addCSS( 'main.css' );
 
 $renderd = $view->render(); //Render view
 
