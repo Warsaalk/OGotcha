@@ -194,14 +194,16 @@ class Main{
 		
 		/**
 		 * @param string $trackId
-		 * @param string $domain
-		 * @param string $name
+		 * @param string $domain Name of the domain you want to track, default: "auto"
+		 * @param string $name Name of the GA Javascript object, default: "ga" 
+		 * @param boolean $send Automaticly send a pageview of not, default: true
 		 */
-		public function addGoogleAnalytics( $trackId, $domain='auto', $name='ga' ){
+		public function addGoogleAnalytics( $trackId, $domain='auto', $name='ga', $autoSend=true ){
 			
 			$this->_ga['ID'] 	= $trackId;
-			$this->_ga['domain']	= $domain;
+			$this->_ga['domain']= $domain;
 			$this->_ga['name']	= $name;
+			$this->_ga['send'] 	= $autoSend; //Send pageview
 			
 		}
 		
