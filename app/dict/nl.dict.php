@@ -28,6 +28,7 @@ $lang["Dutch"] =  "Nederlands";
 $lang["English"] =  "Engels";
 $lang["Convert"] =  "Converteer";
 $lang["Preview"] =  "Voorbeeld";
+$lang["Preview spoiler"] = "Spoilers werken niet in deze voorbeeldweergave, ze werken wel op de Ogame boards";
 $lang["New"] = "<span class=\"new\">(Nieuw!)</span>";
 $lang["Bad Cr"] = "Er is iets fout met het gevechtsrapport, kijk eens of deze volledig is en/of je de juist taal heb gekozen!";
 $lang["Attackers"] ="Aanvaller(s)";

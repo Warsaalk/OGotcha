@@ -74,7 +74,7 @@
 							<td><input type="checkbox" name="merge" id="merge_fleets" value="1" <?php if( $vl->getVariable('merge','value') == '1' || $vl->getVariable('merge','value') == null ) print 'checked="checked"'; ?>></td>
 						</tr>
 						<tr>
-							<td><label for="advanced"><?= $self->getDict()->getVal("Show advanced summary") ?>: <?= $self->getDict()->getVal("New") ?></label></td>
+							<td><label for="advanced"><s><?= $self->getDict()->getVal("Show advanced summary") ?>: <?= $self->getDict()->getVal("New") ?></s></label></td>
 							<td><input type="checkbox" name="advanced" id="advanced" value="1" <?php if( $vl->getVariable('advanced','value') == '1' ) print 'checked="checked"'; ?>></td>
 							<td><label for="spoiler"><?= $self->getDict()->getVal("Use spoilers for harvest reports") ?>:</label> <?= $self->getDict()->getVal("New") ?></td>
 							<td><input type="checkbox" name="spoiler" id="quotes" value="1" <?php if( $vl->getVariable('spoiler','value') == '1' ) print 'checked="checked"'; ?>></td>
@@ -113,6 +113,9 @@
 			<?php if($st->get('result-preview')!=''){ ?>
 			<div id="preview-container">
 				<h1><?= $self->getDict()->getVal("Preview") ?></h1>
+				<?php if( $vl->getVariable('spoiler','value') == '1' ) {?>
+				<h3 style="margin-top:10px"><?= $self->getDict()->getVal("Preview spoiler") ?></h3>
+				<?php } ?>
 				<div id="preview">
 					<?=  $st->get('result-preview') ?>
 				</div>
