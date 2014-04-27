@@ -67,9 +67,11 @@ class Default_Service_CombatReport
 		$rg = $this->getRegexes();
 		
 		$this->readCombatReport( $vl->getVariable('report','value'), $rg );
-		$this->readHarvests( $vl->getVariable('harvest','value'), $rg );
 		$this->readRaids( $vl->getVariable('raids','value'), $rg );
-		$this->readDeuteriumCosts( $vl->getVariable('deuterium','value'), $rg );
+		$this->readHarvests( $vl->getVariable('attacker_harvest','value'), $rg, Default_Model_Team::ATTACKERS );
+		$this->readDeuteriumCosts( $vl->getVariable('attacker_deuterium','value'), $rg, Default_Model_Team::ATTACKERS );
+		$this->readHarvests( $vl->getVariable('defender_harvest','value'), $rg, Default_Model_Team::DEFENDERS );
+		$this->readDeuteriumCosts( $vl->getVariable('defender_deuterium','value'), $rg, Default_Model_Team::DEFENDERS );
 		
 		return $this->_report;
 	
@@ -81,22 +83,34 @@ class Default_Service_CombatReport
         $this->_report = Kokx_Reader_CombatReport::parse($data, $regexes, $this->_settings);
         
 	}
-	public function readHarvests( $data, $regexes )
-   	{
-   		
-       	if ( $data != "" ) $this->_report->setHarvestReports( Kokx_Reader_HarvestReport::parse($data, $regexes) );
-       	
-	}
 	public function readRaids( $data, $regexes )
     {
     	
         if ( $data != "" ) $this->_report->setRaids( Kokx_Reader_Raid::parse($data, $regexes) );  
         
 	}
-	public function readDeuteriumCosts( $data, $regexes )
+	public function readHarvests( $data, $regexes, $team )
+   	{
+   		
+       	if ( $data != "" ){
+       		if( $team === Default_Model_Team::ATTACKERS ){
+       			$this->_report->getAttackers()->setHarvestReports( Kokx_Reader_HarvestReport::parse($data, $regexes) );
+       		}elseif( $team === Default_Model_Team::DEFENDERS ){
+       			$this->_report->getDefenders()->setHarvestReports( Kokx_Reader_HarvestReport::parse($data, $regexes) );
+       		}
+       	}
+       	
+	}
+	public function readDeuteriumCosts( $data, $regexes, $team )
     {
     	
-        if ( $data != "" ) $this->_report->setDeuteriumCosts( Kokx_Reader_deuteriumCosts::parse($data, $regexes) );
+    	if ( $data != "" ){
+       		if( $team === Default_Model_Team::ATTACKERS ){
+       			$this->_report->getAttackers()->setDeuteriumCosts( Kokx_Reader_deuteriumCosts::parse($data, $regexes) );
+       		}elseif( $team === Default_Model_Team::DEFENDERS ){
+       			$this->_report->getDefenders()->setDeuteriumCosts( Kokx_Reader_deuteriumCosts::parse($data, $regexes) );
+       		}
+    	}
         
 	}
 

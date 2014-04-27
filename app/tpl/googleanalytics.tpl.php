@@ -30,6 +30,8 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','<?= $ga['name']; ?>');
 		
 		<?= $ga['name']; ?>('create', '<?= $ga['ID']; ?>', '<?= $ga['domain']; ?>');
+		<?php if( $ga['send'] === true ) { ?>
 		<?= $ga['name']; ?>('send', 'pageview');
+		<?php } ?>
 		</script>
 <?php } ?>

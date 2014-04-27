@@ -147,7 +147,22 @@ class Default_Model_CombatReport
      */
 	
 	protected $_deuteriumCosts;
+	
+	/**
+	 * @var Default_Model_Team
+	 */
+	protected $_attackers;
 
+	/**
+	 * @var Default_Model_Team
+	 */
+	protected $_defenders;
+
+	public function __construct()
+	{
+		$this->_attackers = new Default_Model_Team();
+		$this->_defenders = new Default_Model_Team();
+	}
 
     /**
      * Set the Harvest Reports.
@@ -480,4 +495,21 @@ class Default_Model_CombatReport
     {
         return $this->_moonGiven;
     }
+    
+    /**
+     * @return Default_Model_Team
+     */
+    public function getAttackers()
+    {
+    	return $this->_attackers;
+    }
+    
+    /**
+     * @return Default_Model_Team
+     */
+    public function getDefenders()
+    {
+    	return $this->_defenders;	
+    }
+    
 }

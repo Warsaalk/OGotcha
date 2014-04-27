@@ -29,6 +29,14 @@ $lang["English"] = "English";
 $lang["Convert"] = "Convert";
 $lang["Preview"] = "Preview";
 $lang["Bad Cr"] = "There is something wrong with the combat report, check if it's complete and/or you choose the correct language!";
+$lang["Attackers"] ="Attacker(s)";
+$lang["Defenders"] ="Defender(s)";
+
+$lang["Harvested by the attackers"]= "Harvested by the attacker(s)";
+$lang["Harvested by the defenders"]= "Harvested by the defender(s)";
+
+$lang['The attacker(s) used a total of %s units fuel.'] = 'The attacker(s) used a total of %s units fuel.';
+$lang['The defender(s) used a total of %s units fuel.'] = 'The defender(s) used a total of %s units fuel.';
 
 $lang['Title Placeholder'] = 'Here comes the title of the converted CR';
 $lang['Result Placeholder'] = 'Here comes the converted CR';
@@ -221,6 +229,9 @@ $lang["A total of "] = "A total of ";
 #: application/modules/default/renderers/kokx/scripts/debris.phtml:14
 #: application/modules/default/renderers/tsjerk/scripts/debris.phtml:14
 $lang[" units debris has been recycled."] = " units debris has been recycled.";
+
+$lang[" units debris has been recycled by the defenders."] = " units debris has been recycled by the defender(s).";
+$lang[" units debris has been recycled by the attackers."] = " units debris has been recycled by the attacker(s).";
 
 #: application/modules/default/renderers/kokx/scripts/lossesmoon.phtml:1
 #: application/modules/default/renderers/kokx/scripts/summary.phtml:20

@@ -23,12 +23,20 @@
 $lang[''] = '';
 $lang[' & '] = ' & ';
 $lang['[TOT: %s] %s vs. %s (A: %s, D: %s)'] = '[TOT: %s] %s vs. %s (A: %s, V: %s)';
-$lang["Invalid post"] ="Je moet minstens een gevechtsrapport en skin meegeven.";
-$lang["Dutch"] =  "Nederlands";
-$lang["English"] =  "Engels";
-$lang["Convert"] =  "Converteer";
-$lang["Preview"] =  "Voorbeeld";
-$lang["Bad Cr"] = "Er is iets fout met het gevechtsrapport, kijk eens of deze volledig is en/of je de juist taal heb gekozen!";
+$lang['Invalid post'] ='Je moet minstens een gevechtsrapport en skin meegeven.';
+$lang['Dutch'] =  'Nederlands';
+$lang['English'] =  'Engels';
+$lang['Convert'] =  'Converteer';
+$lang['Preview'] =  'Voorbeeld';
+$lang['Bad Cr'] = 'Er is iets fout met het gevechtsrapport, kijk eens of deze volledig is en/of je de juist taal heb gekozen!';
+$lang['Attackers'] ='Aanvaller(s)';
+$lang['Defenders'] ='Verdediger(s)';
+
+$lang['Harvested by the attackers']= 'Opgehaald door de aanvaller(s)';
+$lang['Harvested by the defenders']= 'Opgehaald door de verdediger(s)';
+
+$lang['The attacker(s) used a total of %s units fuel.'] = 'De aanvaller(s) hebben een totaal van %s Eenheden brandstof gebruikt.';
+$lang['The defender(s) used a total of %s units fuel.'] = 'De verdediger(s) hebben een totaal van %s Eenheden brandstof gebruikt.';
 
 $lang['Title Placeholder'] = 'Hier komt de titel van het geconverteerde gevechtsrapport';
 $lang['Result Placeholder'] = 'Hier komt het geconverteerde gevechtsrapport';
@@ -221,6 +229,10 @@ $lang["A total of "] ="Er is een totaal van ";
 #: application/modules/default/renderers/kokx/scripts/debris.phtml:14
 #: application/modules/default/renderers/tsjerk/scripts/debris.phtml:14
 $lang[" units debris has been recycled."] =" Eenheden puin opgehaald";
+
+$lang[" units debris has been recycled by the defenders."] = " Eenheden puin opgehaald door de verdediger(s).";
+$lang[" units debris has been recycled by the attackers."] = " Eenheden puin opgehaald door de aanvaller(s).";
+
 
 #: application/modules/default/renderers/kokx/scripts/lossesmoon.phtml:1
 #: application/modules/default/renderers/kokx/scripts/summary.phtml:20

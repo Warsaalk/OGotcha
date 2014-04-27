@@ -18,24 +18,62 @@
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
  */
 
-if (count($self->_report->getHarvestReports()) > 0){
-	foreach ($self->_report->getHarvestReports() as $hr){ 
-?>
-		_____________________________________
+$dfAttackers = count($self->_report->getAttackers()->getHarvestReports());
+$dfDefenders = count($self->_report->getDefenders()->getHarvestReports());
 
+if ( $dfAttackers > 0){
+	?>
+	_____________________________________
+	
+	[b]<?= $self->translate("Harvested by the attackers") ?>[/b]
+	
+<?php
+	foreach ($self->_report->getAttackers()->getHarvestReports() as $hr){ 
+?>
         <?= $self->translate("Your ") . $self->colorNumber($hr->getRecyclers()) . $self->translate(" recycler(s) have a total cargo capacity of ") . $self->colorNumber($hr->getCapacity()) ?>.
         <?= $self->translate("At the target, ") . $self->colorNumber($hr->getFieldMetal()) . $self->translate(" metal and ") . $self->colorNumber($hr->getFieldCrystal()) . $self->translate(" crystal are floating in space.") . "\n" ?>
         <?= $self->translate("You have harvested %s metal and %s crystal.", $self->colorNumber($hr->getMetal()), $self->colorNumber($hr->getCrystal())) ?>
 
 		<?php $percent = (($hr->getFieldMetal() + $hr->getFieldCrystal()) > 0) ? ($hr->getMetal() + $hr->getCrystal()) / ($hr->getFieldMetal() + $hr->getFieldCrystal()) * 100 : 0 ?>
-		<?= $self->translate("Recycled: ") . $self->colorNumber($percent, 'blue') ?>%
+<?= $self->translate("Recycled: ") . $self->colorNumber($percent, 'blue') ?>%
+	__________________________
+	
 <?php 
 	} 
+} 
+if ( $dfDefenders > 0){
+	if ( $dfAttackers == 0){
 ?>
-    __________________________
+	_____________________________________
+	
+<?php } ?>
+	[b]<?= $self->translate("Harvested by the defenders") ?>[/b]
+	
+<?php
+	foreach ($self->_report->getDefenders()->getHarvestReports() as $hr){ 
+?>
+        <?= $self->translate("Your ") . $self->colorNumber($hr->getRecyclers()) . $self->translate(" recycler(s) have a total cargo capacity of ") . $self->colorNumber($hr->getCapacity()) ?>.
+        <?= $self->translate("At the target, ") . $self->colorNumber($hr->getFieldMetal()) . $self->translate(" metal and ") . $self->colorNumber($hr->getFieldCrystal()) . $self->translate(" crystal are floating in space.") . "\n" ?>
+        <?= $self->translate("You have harvested %s metal and %s crystal.", $self->colorNumber($hr->getMetal()), $self->colorNumber($hr->getCrystal())) ?>
 
-	<?= $self->translate("A total of ") . $self->colorNumber($self->data->totalDebris) . $self->translate(" units debris has been recycled.") ?>
+		<?php $percent = (($hr->getFieldMetal() + $hr->getFieldCrystal()) > 0) ? ($hr->getMetal() + $hr->getCrystal()) / ($hr->getFieldMetal() + $hr->getFieldCrystal()) * 100 : 0 ?>
+<?= $self->translate("Recycled: ") . $self->colorNumber($percent, 'blue') ?>%
+	__________________________
+	
+<?php 
+	} 
+}    
 
+if ( $dfAttackers > 0){
+	?>
+	<?= $self->translate("A total of ") . $self->colorNumber($self->data->totalDebrisAttackers) . $self->translate(" units debris has been recycled by the attackers.") ?>
+	
+<?php 
+}
+if ( $dfDefenders > 0){
+?>
+	<?= $self->translate("A total of ") . $self->colorNumber($self->data->totalDebrisDefenders) . $self->translate(" units debris has been recycled by the defenders.") ?>
+	
 <?php 
 } 
 ?>

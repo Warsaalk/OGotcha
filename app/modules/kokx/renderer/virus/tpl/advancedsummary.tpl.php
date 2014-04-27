@@ -39,7 +39,7 @@ De aanvallende vloten hebben een totaal van <?= $self->colorNumber(abs($WinLostD
 	}
 ?>
 
-[size=10][url=<?= __BASE_URL ?>]Converted by Kokx's CR Converter <?= __VERSION ?> (skin: ViRuS)[/url][/size][/align]
+[size=10][url=<?= __BASE_URL ?>]Converted by OGotcha CR Converter <?= __VERSION ?> (skin: ViRuS)[/url][/size][/align]
 
 <?php
 }
