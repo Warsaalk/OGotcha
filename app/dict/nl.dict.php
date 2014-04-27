@@ -20,28 +20,31 @@
  *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
-$lang[''] = '';
-$lang[' & '] = ' & ';
-$lang['[TOT: %s] %s vs. %s (A: %s, D: %s)'] = '[TOT: %s] %s vs. %s (A: %s, V: %s)';
-$lang['Invalid post'] ='Je moet minstens een gevechtsrapport en skin meegeven.';
-$lang['Dutch'] =  'Nederlands';
-$lang['English'] =  'Engels';
-$lang['Convert'] =  'Converteer';
-$lang['Preview'] =  'Voorbeeld';
-$lang['Bad Cr'] = 'Er is iets fout met het gevechtsrapport, kijk eens of deze volledig is en/of je de juist taal heb gekozen!';
-$lang['Attackers'] ='Aanvaller(s)';
-$lang['Defenders'] ='Verdediger(s)';
+$lang[""] = "";
+$lang[" & "] = " & ";
+$lang["[TOT: %s] %s vs. %s (A: %s, D: %s)"] = "[TOT: %s] %s vs. %s (A: %s, V: %s)";
+$lang["Invalid post"] ="Je moet minstens een gevechtsrapport en skin meegeven.";
+$lang["Dutch"] =  "Nederlands";
+$lang["English"] =  "Engels";
+$lang["Convert"] =  "Converteer";
+$lang["Preview"] =  "Voorbeeld";
+$lang["Preview spoiler"] = "Spoilers werken niet in deze voorbeeldweergave, ze werken wel op de Ogame boards";
+$lang["New"] = "<span class=\"new\">(Nieuw!)</span>";
+$lang["Bad Cr"] = "Er is iets fout met het gevechtsrapport, kijk eens of deze volledig is en/of je de juist taal heb gekozen!";
+$lang["Attackers"] ="Aanvaller(s)";
+$lang["Defenders"] ="Verdediger(s)";
+$lang["Show advanced summary"] = "Toon geavanceerde samenvatting";
+$lang["Use spoilers for harvest reports"] = "Gebruik spoilers voor puinrapporten";
+$lang["Harvested by the attackers"]= "Puin opgehaald door de aanvaller(s)";
+$lang["Harvested by the defenders"]= "Puin opgehaald door de verdediger(s)";
 
-$lang['Harvested by the attackers']= 'Opgehaald door de aanvaller(s)';
-$lang['Harvested by the defenders']= 'Opgehaald door de verdediger(s)';
+$lang["The attacker(s) used a total of %s units fuel."] = "De aanvaller(s) hebben een totaal van %s Eenheden brandstof gebruikt.";
+$lang["The defender(s) used a total of %s units fuel."] = "De verdediger(s) hebben een totaal van %s Eenheden brandstof gebruikt.";
 
-$lang['The attacker(s) used a total of %s units fuel.'] = 'De aanvaller(s) hebben een totaal van %s Eenheden brandstof gebruikt.';
-$lang['The defender(s) used a total of %s units fuel.'] = 'De verdediger(s) hebben een totaal van %s Eenheden brandstof gebruikt.';
+$lang["Title Placeholder"] = "Hier komt de titel van het geconverteerde gevechtsrapport";
+$lang["Result Placeholder"] = "Hier komt het geconverteerde gevechtsrapport";
 
-$lang['Title Placeholder'] = 'Hier komt de titel van het geconverteerde gevechtsrapport';
-$lang['Result Placeholder'] = 'Hier komt het geconverteerde gevechtsrapport';
-
-$lang['OGotcha'] = 'OGotcha CR converter';
+$lang["OGotcha"] = "OGotcha CR converter";
 
 #: data/translate/ids/ships.php:32
 $lang["Small Cargo"] = "Klein vrachtschip";

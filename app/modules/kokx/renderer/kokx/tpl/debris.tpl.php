@@ -28,6 +28,7 @@ if ( $dfAttackers > 0){
 	[b]<?= $self->translate("Harvested by the attackers") ?>[/b]
 	
 <?php
+	if( $self->_settings['harvest_spoiler'] === true ){ print "[spoiler]\n"; }
 	foreach ($self->_report->getAttackers()->getHarvestReports() as $hr){ 
 ?>
         <?= $self->translate("Your ") . $self->colorNumber($hr->getRecyclers(), '#FC850C') . $self->translate(" recycler(s) have a total cargo capacity of ") . $self->colorNumber($hr->getCapacity(), '#FC850C') ?>.
@@ -40,6 +41,7 @@ if ( $dfAttackers > 0){
 	
 <?php 
 	} 
+	if( $self->_settings['harvest_spoiler'] === true ){ print "[/spoiler]\n"; }
 } 
 if ( $dfDefenders > 0){
 	if ( $dfAttackers == 0){
@@ -50,6 +52,7 @@ if ( $dfDefenders > 0){
 	[b]<?= $self->translate("Harvested by the defenders") ?>[/b]
 	
 <?php
+	if( $self->_settings['harvest_spoiler'] === true ){ print "[spoiler]\n"; }
 	foreach ($self->_report->getDefenders()->getHarvestReports() as $hr){ 
 ?>
         <?= $self->translate("Your ") . $self->colorNumber($hr->getRecyclers(), '#FC850C') . $self->translate(" recycler(s) have a total cargo capacity of ") . $self->colorNumber($hr->getCapacity(), '#FC850C') ?>.
@@ -62,6 +65,7 @@ if ( $dfDefenders > 0){
 
 <?php 
 	} 
+	if( $self->_settings['harvest_spoiler'] === true ){ print "[/spoiler]\n"; }
 } 
 
 if ( $dfAttackers > 0){
