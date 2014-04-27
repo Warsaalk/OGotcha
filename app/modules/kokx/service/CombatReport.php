@@ -27,6 +27,9 @@
 class Default_Service_CombatReport
 {
 
+	/**
+	 * @var array
+	 */
     protected	$_themes = array(
 		'kokx'         => 'kokx',
 		'kokx-nolines' => 'kokx-nolines',
@@ -34,11 +37,36 @@ class Default_Service_CombatReport
 		'virus'        => 'ViRuS',
 		'nexus'        => 'Nexus',
 		'vii'          => 'Vii'
-	),
-	$_data = array();
-				
-	private $_main, $_report, $_settings, $_regex;
+	);
+    
+    /**
+     * @var array
+     */
+    protected $_data = array();
+
+    /**
+     * @var Main
+     */
+	private $_main;
 	
+    /**
+     * @var Kokx_Reader_CombatReport
+     */
+	private $_report;
+	
+    /**
+     * @var array
+     */
+	private $_settings;
+	
+    /**
+     * @var array
+     */
+	private $_regex;
+	
+	/**
+	 * @param Main $main
+	 */
 	public function __construct ( $main ) {
 	
 		$this->_main = $main;
@@ -46,11 +74,17 @@ class Default_Service_CombatReport
 	
 	}
 
+	/**
+	 * @return array
+	 */
     public function getThemes()
     {
         return $this->_themes;
     }
 	
+    /**
+     * @return array
+     */
 	private function getRegexes(){
 	
 		global $phpExt;
@@ -61,12 +95,16 @@ class Default_Service_CombatReport
 	
 	}
 
+	/**
+	 * @return Kokx_Reader_CombatReport
+	 */
 	public function getReport(){
 		
 		$vl = $this->_main->getValidator();		
 		$rg = $this->getRegexes();
 		
 		$this->readCombatReport( $vl->getVariable('report','value'), $rg );
+		
 		$this->readRaids( $vl->getVariable('raids','value'), $rg );
 		$this->readHarvests( $vl->getVariable('attacker_harvest','value'), $rg, Default_Model_Team::ATTACKERS );
 		$this->readDeuteriumCosts( $vl->getVariable('attacker_deuterium','value'), $rg, Default_Model_Team::ATTACKERS );
@@ -77,18 +115,33 @@ class Default_Service_CombatReport
 	
 	}
 
+	/**
+	 * @param string $data
+	 * @param array $regexes
+	 */
     public function readCombatReport( $data, $regexes )
     {
     	
         $this->_report = Kokx_Reader_CombatReport::parse($data, $regexes, $this->_settings);
         
 	}
+	
+	/**
+	 * @param string $data
+	 * @param array $regexes
+	 */
 	public function readRaids( $data, $regexes )
     {
     	
         if ( $data != "" ) $this->_report->setRaids( Kokx_Reader_Raid::parse($data, $regexes) );  
         
 	}
+
+	/**
+	 * @param string $data
+	 * @param array $regexes
+	 * @param int $team
+	 */
 	public function readHarvests( $data, $regexes, $team )
    	{
    		
@@ -101,6 +154,12 @@ class Default_Service_CombatReport
        	}
        	
 	}
+
+	/**
+	 * @param string $data
+	 * @param array $regexes
+	 * @param int $team
+	 */
 	public function readDeuteriumCosts( $data, $regexes, $team )
     {
     	
@@ -136,11 +195,13 @@ class Default_Service_CombatReport
     public function getDefaultSettings()
     {
         return array(
-            'theme'    		=> 'kokx',
-            'middle_text'	=> $this->_main->getDict()->getVal('After the battle...'),
-            'hide_time'  	=> true,
-            'merge_fleets' 	=> true,
-			'lang'			=> 'nl'
+            'theme'    			=> 'kokx',
+            'middle_text'		=> $this->_main->getDict()->getVal('After the battle...'),
+            'hide_time'  		=> true,
+            'merge_fleets' 		=> true,
+            'advanced_summary'  => false,
+            'harvest_quotes' 	=> false,
+			'lang'				=> 'nl'
         );
     }
 
@@ -154,6 +215,9 @@ class Default_Service_CombatReport
         return $this->_data;
     }
 
+    /**
+     * @return array
+     */
     public function getSettings()
     {
         $vl = $this->_main->getValidator();
@@ -164,6 +228,8 @@ class Default_Service_CombatReport
 		$middletext = $vl->getVariable('middletext','value');
 		$hidetime 	= $vl->getVariable('hidetime','value');
 		$merge 		= $vl->getVariable('merge','value');
+		$advanced 	= $vl->getVariable('advanced','value');
+		$quotes 	= $vl->getVariable('quotes','value');
 		
         if ( $theme != "" && isset($this->_themes[$theme])) {
             $this->_settings['theme'] = $theme;
@@ -176,6 +242,12 @@ class Default_Service_CombatReport
         }
         if ( $merge != '1') {
             $this->_settings['merge_fleets'] = false;
+        }
+        if ( $advanced == '1' ) {
+        	$this->_settings['advanced_summary'] = true;
+        }
+        if ( $quotes == '1') {
+        	$this->_settings['harvest_quotes'] = true;
         }
 		
 		$this->_settings['lang'] = $this->_main->getLang();

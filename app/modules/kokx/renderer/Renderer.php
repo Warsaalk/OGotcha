@@ -64,7 +64,7 @@ class Default_Renderer_Renderer
 			$this->data = new stdClass;
 			$this->dict = $dict;
 			
-			$this->getThemeSettings();
+			$this->mergeThemeSettings();
 			
     }
     
@@ -97,7 +97,7 @@ class Default_Renderer_Renderer
 			
 	}
 	
-	public function getThemeSettings() {
+	public function mergeThemeSettings() {
 	
 			$settings = array();
 			
