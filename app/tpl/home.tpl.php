@@ -73,6 +73,12 @@
 							<td><label for="merge"><?= $self->getDict()->getVal("Merge fleets of the same player") ?>:</label></td>
 							<td><input type="checkbox" name="merge" id="merge_fleets" value="1" <?php if( $vl->getVariable('merge','value') == '1' || $vl->getVariable('merge','value') == null ) print 'checked="checked"'; ?>></td>
 						</tr>
+						<tr>
+							<td><label for="advanced"><?= $self->getDict()->getVal("Show advanced summary") ?>: <?= $self->getDict()->getVal("New") ?></label></td>
+							<td><input type="checkbox" name="advanced" id="advanced" value="0" <?php if( $vl->getVariable('advanced','value') == '1' ) print 'checked="checked"'; ?>></td>
+							<td><label for="quotes"><?= $self->getDict()->getVal("Use quotes for harvest reports") ?>:</label> <?= $self->getDict()->getVal("New") ?></td>
+							<td><input type="checkbox" name="quotes" id="quotes" value="0" <?php if( $vl->getVariable('quotes','value') == '1' ) print 'checked="checked"'; ?>></td>
+						</tr>
 					</table>
 				</div>
 				<div class="option">

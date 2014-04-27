@@ -20,28 +20,30 @@
  *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
-$lang[''] = '';
-$lang[' & '] = ' & ';
-$lang['[TOT: %s] %s vs. %s (A: %s, D: %s)'] = '[TOT: %s] %s vs. %s (A: %s, D: %s)';
+$lang[""] = "";
+$lang[" & "] = " & ";
+$lang["[TOT: %s] %s vs. %s (A: %s, D: %s)"] = "[TOT: %s] %s vs. %s (A: %s, D: %s)";
 $lang["Invalid post"] = "Invalid post";
 $lang["Dutch"] = "Dutch";
 $lang["English"] = "English";
 $lang["Convert"] = "Convert";
 $lang["Preview"] = "Preview";
+$lang["New"] = "<span class=\"new\">(New!)</span>";
 $lang["Bad Cr"] = "There is something wrong with the combat report, check if it's complete and/or you choose the correct language!";
 $lang["Attackers"] ="Attacker(s)";
 $lang["Defenders"] ="Defender(s)";
-
+$lang["Show advanced summary"] = "Show advanced summary";
+$lang["Use quotes for harvest reports"] = "Use quotes for harvest reports";
 $lang["Harvested by the attackers"]= "Harvested by the attacker(s)";
 $lang["Harvested by the defenders"]= "Harvested by the defender(s)";
 
-$lang['The attacker(s) used a total of %s units fuel.'] = 'The attacker(s) used a total of %s units fuel.';
-$lang['The defender(s) used a total of %s units fuel.'] = 'The defender(s) used a total of %s units fuel.';
+$lang["The attacker(s) used a total of %s units fuel."] = "The attacker(s) used a total of %s units fuel.";
+$lang["The defender(s) used a total of %s units fuel."] = "The defender(s) used a total of %s units fuel.";
 
-$lang['Title Placeholder'] = 'Here comes the title of the converted CR';
-$lang['Result Placeholder'] = 'Here comes the converted CR';
+$lang["Title Placeholder"] = "Here comes the title of the converted CR";
+$lang["Result Placeholder"] = "Here comes the converted CR";
 
-$lang['OGotcha'] = 'OGotcha CR converter';
+$lang["OGotcha"] = "OGotcha CR converter";
 
 #: data/translate/ids/ships.php:32
 $lang["Small Cargo"] = "Small Cargo";
