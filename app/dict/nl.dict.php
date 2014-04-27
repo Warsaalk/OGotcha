@@ -33,9 +33,9 @@ $lang["Bad Cr"] = "Er is iets fout met het gevechtsrapport, kijk eens of deze vo
 $lang["Attackers"] ="Aanvaller(s)";
 $lang["Defenders"] ="Verdediger(s)";
 $lang["Show advanced summary"] = "Toon geavanceerde samenvatting";
-$lang["Use quotes for harvest reports"] = "Gebruik quotes voor puinrapporten";
-$lang["Harvested by the attackers"]= "Opgehaald door de aanvaller(s)";
-$lang["Harvested by the defenders"]= "Opgehaald door de verdediger(s)";
+$lang["Use spoilers for harvest reports"] = "Gebruik spoilers voor puinrapporten";
+$lang["Harvested by the attackers"]= "Puin opgehaald door de aanvaller(s)";
+$lang["Harvested by the defenders"]= "Puin opgehaald door de verdediger(s)";
 
 $lang["The attacker(s) used a total of %s units fuel."] = "De aanvaller(s) hebben een totaal van %s Eenheden brandstof gebruikt.";
 $lang["The defender(s) used a total of %s units fuel."] = "De verdediger(s) hebben een totaal van %s Eenheden brandstof gebruikt.";

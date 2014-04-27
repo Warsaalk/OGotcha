@@ -37,7 +37,7 @@ class FormManager extends Connector {
 				$vl->addVariable( 'merge', array(), 'integer', false );
 				$vl->addVariable( 'hidetime', array(), 'integer', false ); // Use integer type for this checkbox as it doesn't exits in a group
 				$vl->addVariable( 'advanced', array(), 'integer', false );
-				$vl->addVariable( 'quotes', array(), 'integer', false ); // Use integer type for this checkbox as it doesn't exits in a group
+				$vl->addVariable( 'spoiler', array(), 'integer', false ); 
 				$vl->addVariable( 'raids', array(), 'string', false );
 				$vl->addVariable( 'attacker_harvest', array(), 'string', false );
 				$vl->addVariable( 'attacker_deuterium', array(), 'string', false );

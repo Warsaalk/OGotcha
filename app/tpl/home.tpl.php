@@ -75,9 +75,9 @@
 						</tr>
 						<tr>
 							<td><label for="advanced"><?= $self->getDict()->getVal("Show advanced summary") ?>: <?= $self->getDict()->getVal("New") ?></label></td>
-							<td><input type="checkbox" name="advanced" id="advanced" value="0" <?php if( $vl->getVariable('advanced','value') == '1' ) print 'checked="checked"'; ?>></td>
-							<td><label for="quotes"><?= $self->getDict()->getVal("Use quotes for harvest reports") ?>:</label> <?= $self->getDict()->getVal("New") ?></td>
-							<td><input type="checkbox" name="quotes" id="quotes" value="0" <?php if( $vl->getVariable('quotes','value') == '1' ) print 'checked="checked"'; ?>></td>
+							<td><input type="checkbox" name="advanced" id="advanced" value="1" <?php if( $vl->getVariable('advanced','value') == '1' ) print 'checked="checked"'; ?>></td>
+							<td><label for="spoiler"><?= $self->getDict()->getVal("Use spoilers for harvest reports") ?>:</label> <?= $self->getDict()->getVal("New") ?></td>
+							<td><input type="checkbox" name="spoiler" id="quotes" value="1" <?php if( $vl->getVariable('spoiler','value') == '1' ) print 'checked="checked"'; ?>></td>
 						</tr>
 					</table>
 				</div>

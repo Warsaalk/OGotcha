@@ -200,7 +200,7 @@ class Default_Service_CombatReport
             'hide_time'  		=> true,
             'merge_fleets' 		=> true,
             'advanced_summary'  => false,
-            'harvest_quotes' 	=> false,
+            'harvest_spoiler' 	=> false,
 			'lang'				=> 'nl'
         );
     }
@@ -229,7 +229,7 @@ class Default_Service_CombatReport
 		$hidetime 	= $vl->getVariable('hidetime','value');
 		$merge 		= $vl->getVariable('merge','value');
 		$advanced 	= $vl->getVariable('advanced','value');
-		$quotes 	= $vl->getVariable('quotes','value');
+		$quotes 	= $vl->getVariable('spoiler','value');
 		
         if ( $theme != "" && isset($this->_themes[$theme])) {
             $this->_settings['theme'] = $theme;
@@ -247,7 +247,7 @@ class Default_Service_CombatReport
         	$this->_settings['advanced_summary'] = true;
         }
         if ( $quotes == '1') {
-        	$this->_settings['harvest_quotes'] = true;
+        	$this->_settings['harvest_spoiler'] = true;
         }
 		
 		$this->_settings['lang'] = $this->_main->getLang();

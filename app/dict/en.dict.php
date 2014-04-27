@@ -33,9 +33,9 @@ $lang["Bad Cr"] = "There is something wrong with the combat report, check if it'
 $lang["Attackers"] ="Attacker(s)";
 $lang["Defenders"] ="Defender(s)";
 $lang["Show advanced summary"] = "Show advanced summary";
-$lang["Use quotes for harvest reports"] = "Use quotes for harvest reports";
-$lang["Harvested by the attackers"]= "Harvested by the attacker(s)";
-$lang["Harvested by the defenders"]= "Harvested by the defender(s)";
+$lang["Use spoilers for harvest reports"] = "Use spoilers for harvest reports";
+$lang["Harvested by the attackers"]= "Debris harvested by the attacker(s)";
+$lang["Harvested by the defenders"]= "Debris harvested by the defender(s)";
 
 $lang["The attacker(s) used a total of %s units fuel."] = "The attacker(s) used a total of %s units fuel.";
 $lang["The defender(s) used a total of %s units fuel."] = "The defender(s) used a total of %s units fuel.";
