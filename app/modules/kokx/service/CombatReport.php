@@ -67,9 +67,9 @@ class Default_Service_CombatReport
 		$rg = $this->getRegexes();
 		
 		$this->readCombatReport( $vl->getVariable('report','value'), $rg );
-		$this->readHarvests( $vl->getVariable('harvest','value'), $rg );
 		$this->readRaids( $vl->getVariable('raids','value'), $rg );
-		$this->readDeuteriumCosts( $vl->getVariable('deuterium','value'), $rg );
+		$this->readHarvests( $vl->getVariable('attacker_harvest','value'), $rg );
+		$this->readDeuteriumCosts( $vl->getVariable('attacker_deuterium','value'), $rg );
 		
 		return $this->_report;
 	
