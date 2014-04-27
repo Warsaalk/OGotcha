@@ -29,6 +29,8 @@ $lang["English"] =  "Engels";
 $lang["Convert"] =  "Converteer";
 $lang["Preview"] =  "Voorbeeld";
 $lang["Bad Cr"] = "Er is iets fout met het gevechtsrapport, kijk eens of deze volledig is en/of je de juist taal heb gekozen!";
+$lang["Attackers"] ="Aanvallers";
+$lang["Defenders"] ="Verdedigers";
 
 $lang['Title Placeholder'] = 'Hier komt de titel van het geconverteerde gevechtsrapport';
 $lang['Result Placeholder'] = 'Hier komt het geconverteerde gevechtsrapport';

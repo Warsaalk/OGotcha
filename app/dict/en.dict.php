@@ -29,6 +29,8 @@ $lang["English"] = "English";
 $lang["Convert"] = "Convert";
 $lang["Preview"] = "Preview";
 $lang["Bad Cr"] = "There is something wrong with the combat report, check if it's complete and/or you choose the correct language!";
+$lang["Attackers"] ="Attackers";
+$lang["Defenders"] ="Defenders";
 
 $lang['Title Placeholder'] = 'Here comes the title of the converted CR';
 $lang['Result Placeholder'] = 'Here comes the converted CR';

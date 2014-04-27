@@ -81,7 +81,7 @@
 				</div>
 				<div class="players clearfix">
 					<div class="player attacker">
-						<h1><?= $self->getDict()->getVal("Attacker") ?></h1>
+						<h1><?= $self->getDict()->getVal("Attackers") ?></h1>
 						<div class="option">
 							<h2><?= $self->getDict()->getVal("Harvest Reports") ?></h2>
 							<textarea name="attacker_harvest" id="attacker_harvest_reports" rows="5" cols="100"><?= $vl->getVariable('attacker_harvest','value') ?></textarea>
@@ -92,7 +92,7 @@
 						</div>
 					</div>
 					<div class="player defender">
-						<h1><?= $self->getDict()->getVal("Defender") ?></h1>
+						<h1><?= $self->getDict()->getVal("Defenders") ?></h1>
 						<div class="option">
 							<h2><?= $self->getDict()->getVal("Harvest Reports") ?></h2>
 							<textarea name="defender_harvest" id="defender_harvest_reports" rows="5" cols="100"><?= $vl->getVariable('defender_harvest','value') ?></textarea>
