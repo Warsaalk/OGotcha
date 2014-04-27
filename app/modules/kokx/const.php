@@ -33,6 +33,7 @@ include __KOKX_MODEL . 'CombatRound' 	. $phpExt;
 include __KOKX_MODEL . 'DeuteriumCosts' . $phpExt;
 include __KOKX_MODEL . 'Fleet' 			. $phpExt;
 include __KOKX_MODEL . 'HarvestReport' 	. $phpExt;
+include __KOKX_MODEL . 'Team' 			. $phpExt;
 include __KOKX_MODEL . 'Raid' 			. $phpExt;
 include __KOKX_MODEL . 'Ship' 			. $phpExt;
 

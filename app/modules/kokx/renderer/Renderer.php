@@ -28,8 +28,33 @@
 class Default_Renderer_Renderer
 {
 
-    public $_report, $_settings, $data, $dict, $themeSettings;
+	/**
+	 * @var Default_Model_CombatReport
+	 */
+    public $_report;
+    
+    /**
+     * @var array
+     */
+    public $_settings;
+    
+    /**
+     * @var stdClass
+     */
+    public $data;
+    
+    /**
+     * @var Dictionary
+     */
+    public $dict;
+    
+    public $themeSettings;
 
+    /**
+     * @param array $settings
+     * @param Default_Model_CombatReport $report
+     * @param Dictionary $dict
+     */
     public function __construct(array $settings = array(), $report, $dict)
     {
 	
@@ -42,6 +67,10 @@ class Default_Renderer_Renderer
 			$this->getThemeSettings();
 			
     }
+    
+    /**
+     * @return string
+     */
 	public function translate() { 
 	
 			$n = func_num_args();
@@ -78,6 +107,10 @@ class Default_Renderer_Renderer
 	
 	}
 	
+	/**
+	 * @param string $file
+	 * @return string
+	 */
 	public function render( $file )
 	{
 	
@@ -86,6 +119,9 @@ class Default_Renderer_Renderer
 	
 	}
 	
+	/**
+	 * @return string
+	 */
     public function renderReport()
     {
 
@@ -97,6 +133,9 @@ class Default_Renderer_Renderer
 		
     }
 
+    /**
+     * @return string
+     */
     public function renderTitle()
     {
 	
@@ -135,14 +174,19 @@ class Default_Renderer_Renderer
 			
     }
 
+    /**
+     * @return string
+     */
     public function _renderTime()
     {
-       $this->data->hideTime = isset($this->_settings['hide_time']) ?
-                                     $this->_settings['hide_time'] : true;
+       	$this->data->hideTime = isset($this->_settings['hide_time']) ? $this->_settings['hide_time'] : true;
 
         return $this->render('time');
     }
 
+    /**
+     * @return string
+     */
     public function _renderRounds()
     {
         $result = $this->render('firstround');
@@ -155,48 +199,75 @@ class Default_Renderer_Renderer
 
         return $result;
     }
-
+	
+    /**
+     * @return string
+     */
     public function _renderResult()
     {
-        $this->data->totalDebris = 0;
-	$this->data->raidDeutRes = 0;
+        $this->data->totalDebrisAttackers = 0;
+        $this->data->totalDebrisDefenders = 0;
+		$this->data->raidDeutRes = 0;
 
-        foreach ($this->_report->getHarvestReports() as $hr) {
-            $this->data->totalDebris += $hr->getMetal() + $hr->getCrystal();
+        foreach ($this->_report->getAttackers()->getHarvestReports() as $hr) {
+            $this->data->totalDebrisAttackers += $hr->getMetal() + $hr->getCrystal();
+        }
+        foreach ($this->_report->getDefenders()->getHarvestReports() as $hr) {
+        	$this->data->totalDebrisDefenders += $hr->getMetal() + $hr->getCrystal();
         }
 
         $this->data->totalRaids = $this->_report->getMetal() + $this->_report->getCrystal() + $this->_report->getDeuterium();
         foreach ($this->_report->getRaids() as $raid) {
         	$this->data->totalRaids += $raid->getMetal() + $raid->getCrystal() + $raid->getDeuterium();
-		$this->data->raidDeutRes += $raid->getDeuterium();
+			$this->data->raidDeutRes += $raid->getDeuterium();
         }
         
         // Fuel costs
-	$this->data->totalFuel = 0;
-        if ($this->_report->getDeuteriumCosts() > 0) {
-                
-                foreach ($this->_report->getDeuteriumCosts() as $fuel) {
-                    $this->data->totalFuel += $fuel->getDeuteriumCosts();
-                }
+		$this->data->totalFuel = 0;
+        if ($this->_report->getAttackers()->getDeuteriumCosts() > 0) {
+        	foreach ($this->_report->getAttackers()->getDeuteriumCosts() as $fuel) {
+            	$this->data->totalFuel += $fuel->getDeuteriumCosts();
+        	}
         }
-            return $this->render('winnerloot')
-                 . $this->render('lossesmoon')
-                 . $this->render('debris')
-                 . $this->render('summary')
-		 . $this->render('advancedsummary');
+        if ($this->_report->getDefenders()->getDeuteriumCosts() > 0) {
+        	foreach ($this->_report->getDefenders()->getDeuteriumCosts() as $fuel) {
+        		$this->data->totalFuel += $fuel->getDeuteriumCosts();
+        	}
+        }
+        
+        return 	$this->render('winnerloot')
+               	. $this->render('lossesmoon')
+               	. $this->render('debris')
+               	. $this->render('summary')
+				. $this->render('advancedsummary');
     }	
 	
+    /**
+     * @param string $number
+     * @param string $color
+     * @return string
+     */
 	public function colorNumber($number, $color = '')
     {
 		if( $color == '' ) $color = $this->_settings['numberColor']; 
         return "[color=$color][b]{$this->formatNumber($number)}[/b][/color]";
     }
 	
+    /**
+     * @param string $number
+     * @return string
+     */
 	public function formatNumber($number)
     {
         return number_format($number, 0, ',', '.');
     }
 	
+    /**
+     * @param boolean $attacker
+     * @param Default_Model_Ship $ship
+     * @param Default_Model_Fleet $fleet
+     * @return string
+     */
 	public function formatShip($attacker, Default_Model_Ship $ship, Default_Model_Fleet $fleet = null)
     {
 		$attColor = $this->_settings['shipColorAttacker'];

@@ -52,6 +52,7 @@ foreach ($lastRound->getAttackers() as $key => $fleet){
 $firstFleets = $firstRound->getDefenders();
 foreach ($lastRound->getDefenders() as $key => $fleet){ 
 	?>
+	
     [color=green][b]<?= $self->translate("Defender") ?>[/b][/color] <?= $fleet->getPlayer() . "\n" ?>
 	
     <?php 
