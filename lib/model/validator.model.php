@@ -16,14 +16,32 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 class Validator extends Connector {
 
-		private $_vars 		= array(),
-				$_valid 	= true,
-				$_validated	= false;
+		/**
+		 * @var array
+		 */
+		private $_vars 		= array();
 		
+		/**
+		 * @var boolean
+		 */
+		private $_valid 	= true;
+
+		/**
+		 * @var boolean
+		 */
+		private $_validated	= false;
+		
+		/**
+		 * @param string $x
+		 * @param string $type
+		 * @return string|int
+		 */
 		public static function cleanInput( $x, $type='string' ){
 		
 				$x = trim( $x );
@@ -56,11 +74,15 @@ class Validator extends Connector {
 			
 		}
 		
-		/***
-		*
-		* Example : addVariable ( $var , array( 'max=10' ), integer, false, 10 )
-		*
-		***/
+		/**
+		 * Example : addVariable ( $var , array( 'max=10' ), integer, false, 10 )
+		 * 
+		 * @param string $name
+		 * @param array $rules
+		 * @param string $type
+		 * @param boolean $required
+		 * @param string $default
+		 */
 		public function addVariable( $name, $rules=array(), $type='string', $required=true, $default='' ){
 		
 				$this->_vars[ $name ] = array( 
@@ -73,17 +95,32 @@ class Validator extends Connector {
 		
 		}
 		
+		/**
+		 * @param string $name
+		 * @param boolean $index
+		 * @return Ambigous <NULL, string|int>
+		 */
 		public function getVariable( $name, $index=false ){	
 			
 				if( $index !== false && isset( $this->_vars[ $name ][ $index ] ) ) 
 					return $this->_vars[ $name ][ $index ];	
 				return ( isset( $this->_vars[ $name ] ) ? $this->_vars[ $name ] : null ); //Avoid irritating notices		
 				
-		}	
+		}
+		
+		/** @return array */
 		public function getVariables(){			return $this->_vars;			}
+		
+		/** @return boolean */
 		public function isValid(){				return $this->_valid;			}
+		
+		/** @return boolean */
 		public function isValidated(){			return $this->_validated;		}
 		
+		/**
+		 * @param array $form
+		 * @param array $files
+		 */
 		public function validate( $form, $files=array() ){
 			
 				//Loop over all desired variables

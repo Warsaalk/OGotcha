@@ -16,13 +16,19 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
-include 'const.php'; //File which contains all
-
-//Include modules
+/**
+ * Include everything we need
+ */
+include 'const.php';
 include __MODULES . 'kokx/const.php';
 
+/**
+ * Let the Main handle everything :)
+ */
 $main = new Main(); //Create Main 
 
 //$main->addInfo( new Info( "This website is still under construction and can be used for testing purposes only! Errors can occur when doing certain actions.", Info::INFORMATION ) );
@@ -43,13 +49,16 @@ $main->handlePost(); //Handle $_POST
 $main->handleModule( 'KokxModule' ); //Name of module class
 
 $main->addGoogleAnalytics( 'UA-46271379-4' );
-		
+
+/**
+ * Handle View
+ */
 $view = new View( $main ); //Create view 
-$view->addCSS( 'main.css' );
+$view->addCSS( 'main.css' ); //Add style
 
-$renderd = $view->render(); //Render view
+$renderd = $view->render(); //Render content
 
-echo $renderd; //Echo view 
+echo $renderd; //Dispay content
 
 /*
  * http://pastebin.com/Fg1uhvU4 - Dutch

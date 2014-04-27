@@ -16,13 +16,27 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 class Store extends Connector {
 
+		/**
+		 * @var array
+		 */
 		private $_data;
 				
+		/**
+		 * @param string $key
+		 * @param string|int|boolean $value
+		 */
 		public function set( $key, $value ) { $this->_data[ $key ] = $value; }
+		
+		/**
+		 * @param string $key
+		 * @return Ambigous <string, string|int|boolean>
+		 */
 		public function get( $key ) 		{ return ( isset( $this->_data[ $key ] ) ? $this->_data[ $key ] : '' ); }
 
 }

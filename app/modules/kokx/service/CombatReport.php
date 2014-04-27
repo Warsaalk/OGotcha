@@ -41,8 +41,8 @@ class Default_Service_CombatReport
 	
 	public function __construct ( $main ) {
 	
-			$this->_main = $main;
-			$this->_main->getStore()->set( 'themes', $this->_themes );
+		$this->_main = $main;
+		$this->_main->getStore()->set( 'themes', $this->_themes );
 	
 	}
 
@@ -53,11 +53,11 @@ class Default_Service_CombatReport
 	
 	private function getRegexes(){
 	
-			global $phpExt;
+		global $phpExt;
 	
-			$regexes = array();
-			require_once( __KOKX_REGEX . $this->_settings['lang'] . $phpExt );
-			return $regexes;
+		$regexes = array();
+		require_once( __KOKX_REGEX . $this->_settings['lang'] . $phpExt );
+		return $regexes;
 	
 	}
 
@@ -77,19 +77,27 @@ class Default_Service_CombatReport
 
     public function readCombatReport( $data, $regexes )
     {
+    	
         $this->_report = Kokx_Reader_CombatReport::parse($data, $regexes, $this->_settings);
+        
 	}
 	public function readHarvests( $data, $regexes )
-    {
-        if ( $data != "" ) $this->_report->setHarvestReports( Kokx_Reader_HarvestReport::parse($data, $regexes) );
+   	{
+   		
+       	if ( $data != "" ) $this->_report->setHarvestReports( Kokx_Reader_HarvestReport::parse($data, $regexes) );
+       	
 	}
 	public function readRaids( $data, $regexes )
     {
+    	
         if ( $data != "" ) $this->_report->setRaids( Kokx_Reader_Raid::parse($data, $regexes) );  
+        
 	}
 	public function readDeuteriumCosts( $data, $regexes )
     {
+    	
         if ( $data != "" ) $this->_report->setDeuteriumCosts( Kokx_Reader_deuteriumCosts::parse($data, $regexes) );
+        
 	}
 
     /**
@@ -102,7 +110,7 @@ class Default_Service_CombatReport
     public function getRenderer(array $settings, $report)
     {
         
-            return new Default_Renderer_Renderer($settings, $report, $this->_main->getDict());
+    	return new Default_Renderer_Renderer($settings, $report, $this->_main->getDict());
 
 	}
 

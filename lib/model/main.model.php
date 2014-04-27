@@ -16,38 +16,117 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 class Main{
 
-		private $_page,
-			$_lang,
-			$_get, //Store for get variables
-			$_info = array(),
-			$_ga = array(),
-			$_validator,
-			$_formmanager,
-			$_dictionary,
-			$_store;
-				
+		/**
+		 * @var string
+		 */
+		private $_page;
+		
+		/**
+		 * @var string
+		 */
+		private $_lang;
+		
+		/**
+		 * Store for get variables
+		 * 
+		 * @var array
+		 */
+		private $_get;
+		
+		/**
+		 * @var Info[]
+		 */
+		private $_info = array();
+		
+		/**
+		 * @var array
+		 */
+		private $_ga = array();
+		
+		/**
+		 * @var Validator
+		 */
+		private $_validator;
+		
+		/**
+		 * @var FormManager
+		 */
+		private $_formmanager;
+		
+		/**
+		 * @var Dictionary
+		 */
+		private $_dictionary;
+		
+		/**
+		 * @var Store
+		 */
+		private $_store;
+		
+		/**
+		 * @var stdClass
+		 */
 		public $settings;
 				
-		public function __construct() 		{ $this->settings = new stdClass; }
+		public function __construct() { $this->settings = new stdClass; }
 		
-		public function initDictionaries( $dicts, $default=false )	{ Language::init( $dicts, $default ); }
-		public function initPages( $pages, $default=false ) 		{ Page::init( $pages, $default ); }
+		/**
+		 * @param array $dicts
+		 * @param string $default
+		 */
+		public function initDictionaries( $dicts, $default=false ) { Language::init( $dicts, $default ); }
 		
-		public function setValidator( $va )	{ $va->connectMain( $this );	$this->_validator = $va;	}
-		public function getValidator()		{ return $this->_validator;					}
+		/**
+		 * @param array $pages
+		 * @param string $default
+		 */
+		public function initPages( $pages, $default=false ) { Page::init( $pages, $default ); }
 		
-		public function setFormManager( $fm )	{ $fm->connectMain( $this );	$this->_formmanager = $fm;	}
-		public function getFormManager()	{ return $this->_formmanager;					}
+		/**
+		 * @param Validator $va
+		 */
+		public function setValidator( $va )	{ $va->connectMain( $this ); $this->_validator = $va; }
 		
-		public function setDict( $dc )		{ $dc->connectMain( $this );	$this->_dictionary = $dc;	}
-		public function getDict()		{ return $this->_dictionary;					}
+		/**
+		 * @return Validator
+		 */
+		public function getValidator() { return $this->_validator; }
 		
-		public function setStore( $st )		{ $st->connectMain( $this );	$this->_store = $st;		}
-		public function getStore()		{ return $this->_store;						}
+		/**
+		 * @param FormManager $fm
+		 */
+		public function setFormManager( $fm ) { $fm->connectMain( $this ); $this->_formmanager = $fm; }
+		
+		/**
+		 * @return FormManager
+		 */
+		public function getFormManager() { return $this->_formmanager; }
+		
+		/**
+		 * @param Dictionary $dc
+		 */
+		public function setDict( $dc ) { $dc->connectMain( $this ); $this->_dictionary = $dc; }
+		
+		/**
+		 * @return Dictionary
+		 */
+		public function getDict() { return $this->_dictionary; }
+		
+		/**
+		 * @param Store $st
+		 */
+		public function setStore( $st )	{ $st->connectMain( $this ); $this->_store = $st; }
+		
+		/**
+		 * @return Store
+		 */
+		public function getStore() { return $this->_store; }
 		
 		public function handleGet() {
 
@@ -101,9 +180,11 @@ class Main{
 			
 			}
 				
-		
 		}
 		
+		/**
+		 * @param string $class
+		 */
 		public function handleModule( $class ){
 		
 			$instance = new $class();
@@ -111,6 +192,11 @@ class Main{
 		
 		}
 		
+		/**
+		 * @param string $trackId
+		 * @param string $domain
+		 * @param string $name
+		 */
 		public function addGoogleAnalytics( $trackId, $domain='auto', $name='ga' ){
 			
 			$this->_ga['ID'] 	= $trackId;
@@ -119,20 +205,48 @@ class Main{
 			
 		}
 		
+		/**
+		 * @return array
+		 */
 		public function getGoogleAnalytics(){
 			
 			return $this->_ga;
 			
 		}
 		
-		public function addInfo( $info ){	array_push( $this->_info, $info ); }
-		public function getInfo() {		return $this->_info; }
-		public function get( $var ) {		return ( isset( $this->_gets[ $var ] ) ? $this->_gets[ $var ] : null ); }
-		public function getPage() {		return $this->_page; }
-		public function getLang() {		return $this->_lang; }
+		/**
+		 * @param Info $info
+		 */
+		public function addInfo( $info ){ array_push( $this->_info, $info ); }
 		
+		/**
+		 * @return Info[]
+		 */
+		public function getInfo() {	return $this->_info; }
+		
+		/**
+		 * @param string $var
+		 * @return Ambigous <NULL, string>
+		 */
+		public function get( $var ) { return ( isset( $this->_gets[ $var ] ) ? $this->_gets[ $var ] : null ); }
+		
+		/**
+		 * @return string
+		 */
+		public function getPage() {	return $this->_page; }
+		
+		/**
+		 * @return string
+		 */
+		public function getLang() {	return $this->_lang; }
+		
+		/**
+		 * @param string $name
+		 * @param string|int|boolean $value
+		 * @param int $time
+		 */
 		public function saveCookie( $name, $value, $time=NULL ){
-		
+			
 				global $_COOKIE;
 				
 				if( $time != NULL )

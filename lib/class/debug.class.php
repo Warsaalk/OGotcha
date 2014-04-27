@@ -16,16 +16,28 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 class Debug {
-	//Print arrays in readable format
+	
+	/**
+	 * Print arrays in readable format
+	 * 
+	 * @param array $arr
+	 */
 	public static function arr( $arr ){
 		print	'<pre>';
 		print_r ($arr);
 		print	'</pre>';
 	}
-	//Print string on new line
+	
+	/**
+	 * Print string on new line
+	 * 
+	 * @param string $str
+	 */
 	public static function str( $str ){
 		print '<div>';
 		print ($str);

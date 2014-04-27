@@ -16,13 +16,25 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 abstract class Connector {
 	
+		/**
+		 * @var Main
+		 */
 		private $_main;
 
-		public function connectMain( $main ) 	{ $this->_main = $main; }
-		public function Main()			{ return $this->_main;	}
+		/**
+		 * @param Main $main
+		 */
+		public function connectMain( $main ) { $this->_main = $main; }
+		
+		/**
+		 * @return Main
+		 */
+		public function Main() { return $this->_main; }
 		
 }

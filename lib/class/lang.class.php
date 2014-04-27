@@ -16,13 +16,26 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 class Language {
 
+	/**
+	 * @var string
+	 */
 	private static $default;
+	
+	/**
+	 * @var string[]
+	 */
 	private static $languages;
 	
+	/**
+	 * @param array $languages
+	 * @param string $default
+	 */
 	public static function init( array $languages = array(), $default=false ){
 	
 			self::$languages = $languages;
@@ -34,6 +47,10 @@ class Language {
 	
 	}
 	
+	/**
+	 * @param string $lang
+	 * @return string
+	 */
 	public static function validate( $lang ){
 				
 			if( !in_array( $lang, self::$languages ) )
@@ -42,6 +59,9 @@ class Language {
 	
 	}
 	
+	/**
+	 * @return string
+	 */
 	public static function getDefault(){
 				
 			return self::$default;

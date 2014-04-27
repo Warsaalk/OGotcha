@@ -16,24 +16,40 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 class Dictionary extends Connector {
 	
+	/**
+	 * @var array
+	 */
 	private $_dict = array();
-		
+
+	/**
+	 * @param string $i
+	 * @param string $val
+	 */
 	public function setVal( $i, $val ) {
 	
 			$this->_dict[ $i ] = $val;
 	
 	}
 	
+	/**
+	 * @param string $i
+	 * @return string
+	 */
 	public function getVal( $i ) {
 	
 			return ( isset( $this->_dict[ $i ] ) ? $this->_dict[ $i ] : 'No translation present' );
 	
 	}
 	
+	/**
+	 * @param array $lang
+	 */
 	public function addValues( $lang ) {
 	
 			$temp = array_merge( $this->_dict, $lang );

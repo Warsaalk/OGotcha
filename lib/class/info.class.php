@@ -16,6 +16,8 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   
+ *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
 class Info{
@@ -25,17 +27,32 @@ class Info{
 			WARNING		= 'warning',
 			ERROR		= 'error';
 	
-	private $_message,
-			$_type,
-			$_types 	= array(
+	/**
+	 * @var string
+	 */
+	private $_message;
 	
-					'information'	=> array( 'img' => 'information.png' ),
-					'success'		=> array( 'img' => 'success.png' ),
-					'warning'		=> array( 'img' => 'warning.png' ),
-					'error'			=> array( 'img' => 'error.png' )
-			
-			);
+	/**
+	 * @var string
+	 */
+	private $_type;
 	
+	/**
+	 * @var array
+	 */
+	private $_types = array(
+	
+		'information'	=> array( 'img' => 'information.png' ),
+		'success'		=> array( 'img' => 'success.png' ),
+		'warning'		=> array( 'img' => 'warning.png' ),
+		'error'			=> array( 'img' => 'error.png' )
+	
+	);
+	
+	/**
+	 * @param string $mess
+	 * @param string $type
+	 */
 	public function __construct( $mess, $type=self::SUCCESS ){	
 	
 			$this->_message	= $mess;
@@ -43,14 +60,25 @@ class Info{
 			
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getMessage(){
 			return $this->_message;
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getType(){
 			return $this->_type;
 	}
 	
+	/**
+	 * Path to image
+	 * 
+	 * @return string
+	 */
 	public function getImage(){
 			return __IMAGES . $this->_types[ $this->_type ]['img'];
 	}
