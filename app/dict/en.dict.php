@@ -35,6 +35,9 @@ $lang["Defenders"] ="Defender(s)";
 $lang["Harvested by the attackers"]= "Harvested by the attacker(s)";
 $lang["Harvested by the defenders"]= "Harvested by the defender(s)";
 
+$lang['The attacker(s) used a total of %s units fuel.'] = 'The attacker(s) used a total of %s units fuel.';
+$lang['The defender(s) used a total of %s units fuel.'] = 'The defender(s) used a total of %s units fuel.';
+
 $lang['Title Placeholder'] = 'Here comes the title of the converted CR';
 $lang['Result Placeholder'] = 'Here comes the converted CR';
 

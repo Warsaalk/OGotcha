@@ -223,23 +223,28 @@ class Default_Renderer_Renderer
         }
         
         // Fuel costs
-		$this->data->totalFuel = 0;
+		$this->data->totalFuelAttackers = 0;
+		$this->data->totalFuelDefenders = 0;
         if ($this->_report->getAttackers()->getDeuteriumCosts() > 0) {
         	foreach ($this->_report->getAttackers()->getDeuteriumCosts() as $fuel) {
-            	$this->data->totalFuel += $fuel->getDeuteriumCosts();
+            	$this->data->totalFuelAttackers += $fuel->getDeuteriumCosts();
         	}
         }
         if ($this->_report->getDefenders()->getDeuteriumCosts() > 0) {
         	foreach ($this->_report->getDefenders()->getDeuteriumCosts() as $fuel) {
-        		$this->data->totalFuel += $fuel->getDeuteriumCosts();
+        		$this->data->totalFuelDefenders += $fuel->getDeuteriumCosts();
         	}
         }
+        
+        // calculate the result
+        $this->data->attackerResult = $this->data->totalDebrisAttackers + $this->data->totalRaids - $this->data->totalFuelAttackers - $this->_report->getLossesAttacker();
+        $this->data->defenderResult = $this->data->totalDebrisDefenders - $this->data->totalFuelDefenders - $this->_report->getLossesDefender();
         
         return 	$this->render('winnerloot')
                	. $this->render('lossesmoon')
                	. $this->render('debris')
-               	. $this->render('summary')
-				. $this->render('advancedsummary');
+               	. $this->render('summary');
+				//. $this->render('advancedsummary');
     }	
 	
     /**
