@@ -37,11 +37,10 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-			<div id="submit-container">
+			<div id="submit-container" class="clearfix">
 				<input type="submit" name="submit" id="submit" value="<?= $self->getDict()->getVal("Convert") ?>">
 				<?php if($st->get('result-preview')!=''){ ?>
 					<div id="goto-preview"><a href="<?= $self->makeAnchor("preview-container") ?>"><?= $self->getDict()->getVal("Preview") ?></a></div>
-					<div class="clear"></div>
 				<?php } ?>
 			</div>
 			<div id="options-container">

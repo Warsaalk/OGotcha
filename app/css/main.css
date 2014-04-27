@@ -68,6 +68,7 @@ textarea{ border: 0; padding: 5px; background: #000; color: #ddd; }
 	
 	/*** Submit cr styles ***/
 	#submit-container{ margin: 10px 0; }
+		#submit-container #submit { float: left; }
 		#submit-container #goto-preview { float: right; margin-top: 10px; }
 			#submit-container a { text-decoration: none }
 			
