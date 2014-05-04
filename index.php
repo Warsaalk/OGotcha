@@ -29,7 +29,7 @@ include __MODULES . 'kokx/const.php';
 /**
  * Let the Main handle everything :)
  */
-$main = new Main(); //Create Main 
+$main = new Main(); //Create Main
 
 //$main->addInfo( new Info( "This website is still under construction and can be used for testing purposes only! Errors can occur when doing certain actions.", Info::INFORMATION ) );
 //$main->addInfo( new Info( "Copyrights are not final yet. This software is under GNU GPL v3 license, the source will be available when the software is finished!", Info::INFORMATION ) );
@@ -49,6 +49,8 @@ $main->handlePost(); //Handle $_POST
 $main->handleModule( 'KokxModule' ); //Name of module class
 
 $main->addGoogleAnalytics( 'UA-46271379-4' );
+
+$main->addInfo( new Info( $main->getDict()->getVal('OGotcha release'), Info::INFORMATION ) );
 
 /**
  * Handle View
