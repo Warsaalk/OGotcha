@@ -28,10 +28,10 @@ That's when I offered my help to start updating and fixing the code.
 After a few updates and not knowing the Zend framework (used in the original code), I decided to start using my own little "framework" and simplifying existing code.
 And that's where the code is now.
 
-## The small library
+## The small framework
 
 ## The actual converter module
 
-[history]: 
-[lib]:
-[module]:
+[history]: https://github.com/Warsaalk/OGotcha/blob/develop/DOCUMENTATION.md#a-little-bit-of-history
+[frame]: https://github.com/Warsaalk/OGotcha/blob/develop/DOCUMENTATION.md#the-small-framework
+[module]: https://github.com/Warsaalk/OGotcha/blob/develop/DOCUMENTATION.md#the-actual-converter-module
