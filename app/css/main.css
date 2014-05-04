@@ -65,8 +65,8 @@ textarea{ border: 0; padding: 5px; background: #000; color: #ddd; }
 	#cr-right{ float: right; }
 			#cr-title span{ line-height: 26px; font-weight: bold; }
 			#cr-title input{ border: 0; float: right; }
-		#cr-left textarea{ height: 350px;}
-		#cr-right textarea{ margin-top: 10px; height: 314px; }
+		#cr-left textarea{ height: 300px;}
+		#cr-right textarea{ margin-top: 10px; height: 264px; }
 	
 	/*** Submit cr styles ***/
 	#submit-container{ margin: 10px 0; }
