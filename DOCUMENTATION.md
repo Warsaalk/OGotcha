@@ -4,7 +4,7 @@ This document will guide you through the written code and how it works.
 
 ## Index
 - [A little bit of history][history]
-- [The small framework][lib]
+- [The small framework][frame]
 - [The actual converter module][module]
 
 ## A little bit of history
