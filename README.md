@@ -12,19 +12,19 @@ When copying the software you should change 2 files before you start testing:
 
 The /git/ogame-converter/ needs to be changed to the path on your testing server.
 
-**.htaccess**
+**.htaccess** at line 24
 ```
-  RewriteBase /git/ogame-converter/
+  RewriteBase /git/ogame-converter
 ```
 
-**const.php**
+**const.php** at line 24
 ```
   define( '__BASE', '/git/ogame-converter/'	);
 ```
 
 ## License
 
-Licensed under [GNU GPL v3][gpl]. Have fun.
+Licensed under [GNU GPL v3][gpl].
 
 [gpl]: https://raw.githubusercontent.com/Warsaalk/OGotcha/master/COPYING
 [dijk]: http://converter.dijkman-winters.nl/
