@@ -11,9 +11,9 @@ This document will guide you through the written code and how it works.
 
 The code apart from the Kokx module has a lot of history for me.
 I've been writing PHP since 2008/2009 in my spare time. 
-Most of it I learned on my own, school didn't learn me much, only a few basic principles.
+Most of it I learned on my own with the help of awesome examples and other developers, school didn't learn me much only a few basic principles.
 Why didn't I start using libraries ?
-Ignorance and wanting write my own code are the most important reasons.
+Ignorance and wanting write my own code are the most important reasons :).
 The code still improves bit by bit with every little project I do, but it still has a long way to go.
 I could go on for hours about it, but I'm gonna stop here.
 You can always query me if you'd like to know more.
@@ -29,6 +29,9 @@ After a few updates and not knowing the Zend framework (used in the original cod
 And that's where the code is now.
 
 ## The small framework
+
+Everything starts at *index.php* which inits and connects everything.
+Includes and constant definitions ar defined in *const.php*.
 
 ## The actual converter module
 
