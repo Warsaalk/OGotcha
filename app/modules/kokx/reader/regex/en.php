@@ -32,9 +32,9 @@ $regexes['advanced_raid'] .= '\s*At these space coordinates now float ([0-9.]*) 
 $regexes['simple_raid'] = '([0-9.]*) metal, ([0-9.]*) crystal and ([0-9.]*) deuterium';
 
 //Harvest Regex
-$regexes['harvest'] = 'Your\s*recycler\(s\)\s*\(([0-9.]*?)\)\s*cargo\s*capacity\s*of\s*([0-9.]*?).\s*';
+$regexes['harvest'] = 'Your\s*recycler\(s\)\s*\(([0-9.]*?)\)\s*have\s*a\s*total\s*cargo\s*capacity\s*of\s*([0-9.]*?).\s*';
 $regexes['harvest'] .= 'At\s*the\s*target\s*\[([0-9.]*?:[0-9.]*?:[0-9.]*?)\],\s*([0-9.]*?)\s*metal\s*and\s*([0-9.]*?)\s*crystal\s*are\s*floating\s*in\s*space.\s*';
-$regexes['harvest'] .= 'have\s*harvested\s*([0-9.]*?)\s*metal\s*and\s*([0-9.]*?)\s*crystal';
+$regexes['harvest'] .= 'You\s*have\s*harvested\s*([0-9.]*?)\s*metal\s*and\s*([0-9.]*?)\s*crystal.';
 
 //Combat Regex
 $regexes['start'] = 'On';
