@@ -46,6 +46,8 @@ $lang["Result Placeholder"] = "Hier komt het geconverteerde gevechtsrapport";
 
 $lang["OGotcha"] = "OGotcha CR converter";
 
+$lang["OGotcha release"] = "Welkom bij de nieuwe OGotcha CR converter, deze is gebaseerd op de kokx CR converter, meer info volgt snel!";
+
 #: data/translate/ids/ships.php:32
 $lang["Small Cargo"] = "Klein vrachtschip";
 
