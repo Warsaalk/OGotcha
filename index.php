@@ -65,4 +65,5 @@ echo $renderd; //Dispay content
 /*
  * http://pastebin.com/Fg1uhvU4 - Dutch
  * http://pastebin.com/1xzDcJm4 - English
+ * http://pastebin.com/gT7PFkxK - English
  */
