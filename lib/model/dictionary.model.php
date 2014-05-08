@@ -38,12 +38,34 @@ class Dictionary extends Connector {
 	}
 	
 	/**
-	 * @param string $i
+	 * @param string $value
 	 * @return string
 	 */
-	public function getVal( $i ) {
+	public function getVal() {
 	
-			return ( isset( $this->_dict[ $i ] ) ? $this->_dict[ $i ] : 'No translation present' );
+			$noTrans = 'No translation present';
+		
+			$n = func_num_args();
+				
+			if( $n > 0 ) {
+			
+				$s = func_get_arg( 0 );
+				$s = ( isset( $this->_dict[ $s ] ) ? $this->_dict[ $s ] : 'No translation present' );
+					
+				if( $n > 1 ) {
+			
+					$args = func_get_args();
+					$args[0] = $s; //Replace original value with translated one
+			
+					return call_user_func_array( 'sprintf', $args );
+			
+				}
+			
+				return $s;
+					
+			}
+				
+			return $noTrans;
 	
 	}
 	
