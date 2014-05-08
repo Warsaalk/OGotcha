@@ -43,8 +43,8 @@
 					<div id="goto-preview"><a href="<?= $self->makeAnchor("preview-container") ?>"><?= $self->getDict()->getVal("Preview") ?></a></div>
 				<?php } ?>
 			</div>
-			<div id="options-container">
-				<div class="option">
+			<div id="options-container" class="outer-block">
+				<div class="option inner-block">
 					<h2><?= $self->getDict()->getVal("Generic options") ?></h2>
 					<table id="option-table" border="0">
 						<tr>
@@ -81,29 +81,29 @@
 						</tr>
 					</table>
 				</div>
-				<div class="option">
+				<div class="option inner-block">
 					<h2><?= $self->getDict()->getVal("Raids") ?></h2>
 					<textarea name="raids" id="raids" rows="5" cols="100"><?= $vl->getVariable('raids','value') ?></textarea>
 				</div>
 				<div class="players clearfix">
 					<div class="player attacker">
 						<h1><?= $self->getDict()->getVal("Attackers") ?></h1>
-						<div class="option">
+						<div class="option inner-block">
 							<h2><?= $self->getDict()->getVal("Harvest Reports") ?></h2>
 							<textarea name="attacker_harvest" id="attacker_harvest_reports" rows="5" cols="100"><?= $vl->getVariable('attacker_harvest','value') ?></textarea>
 						</div>
-						<div class="option">
+						<div class="option inner-block">
 							<h2><?= $self->getDict()->getVal("Deuterium Costs") ?></h2>
 							<textarea name="attacker_deuterium" id="attacker_deuterium" rows="5" cols="100"><?= $vl->getVariable('attacker_deuterium','value') ?></textarea>
 						</div>
 					</div>
 					<div class="player defender">
 						<h1><?= $self->getDict()->getVal("Defenders") ?></h1>
-						<div class="option">
+						<div class="option inner-block">
 							<h2><?= $self->getDict()->getVal("Harvest Reports") ?></h2>
 							<textarea name="defender_harvest" id="defender_harvest_reports" rows="5" cols="100"><?= $vl->getVariable('defender_harvest','value') ?></textarea>
 						</div>
-						<div class="option">
+						<div class="option inner-block">
 							<h2><?= $self->getDict()->getVal("Deuterium Costs") ?></h2>
 							<textarea name="defender_deuterium" id="defender_deuterium" rows="5" cols="100"><?= $vl->getVariable('defender_deuterium','value') ?></textarea>
 						</div>
@@ -111,7 +111,7 @@
 				</div>
 			</div>
 			<?php if($st->get('result-preview')!=''){ ?>
-			<div id="preview-container">
+			<div id="preview-container" class="outer-block">
 				<h1><?= $self->getDict()->getVal("Preview") ?></h1>
 				<?php if( $vl->getVariable('spoiler','value') == '1' ) {?>
 				<h3 style="margin-top:10px"><?= $self->getDict()->getVal("Preview spoiler") ?></h3>

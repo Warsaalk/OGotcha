@@ -81,8 +81,8 @@ textarea{ border: 0; padding: 5px; background: #000; color: #ddd; }
 		#submit-container input:hover{ background: #576d7b; }
 		
 	/*** Options styles ***/
-	#options-container{ margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
-		#options-container .option{ padding: 20px; margin: 0 0 10px; background: #252e37; }
+	#options-container{ }
+		#options-container .option{ }
 			#options-container .option #option-table{ width: 850px; margin-top: 10px; }
 			#options-container .option #option-table td { min-height: 28px; height: 28px; }
 			#options-container .option textarea{ margin-top: 20px; border: 0; width: 840px; }
@@ -94,7 +94,7 @@ textarea{ border: 0; padding: 5px; background: #000; color: #ddd; }
 			#options-container .defender { float: right; }
 			
 	/*** Preview styles ***/
-	#preview-container{ margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
+	#preview-container{ }
 
 
 	/*** Info page styles ***/
@@ -104,8 +104,14 @@ textarea{ border: 0; padding: 5px; background: #000; color: #ddd; }
 	#info-sign span { font-size: 2em; font-weight: bold; padding-right: 10px; }
 	
 	#infopage { margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
+	#infopage ul { list-style: none; }
+	#infopage ul li { margin-top: 20px; }
+	#infopage ul li p { margin-top: 10px; }
 	
 	footer { margin: 0 auto; width: 950px; padding-bottom: 20px; }
+
+.outer-block { margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
+.inner-block { padding: 20px; margin: 0 0 10px; background: #252e37; }
 
 .info{ padding-bottom: 10px; }
 	.info .information,
