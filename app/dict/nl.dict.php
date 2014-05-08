@@ -323,3 +323,16 @@ $lang["Destroyed!"] ="Vernietigd!";
 
 #~ $lang[" units."] =
 #~ " Eenheden verloren.";
+
+/*** INFO page ***/
+$lang["Info"] = "Info";
+$lang["Help"] = "Help";
+$lang["Copy Paste your battle report"] = "Kopieer en plak je gevechtsrapport";
+$lang["copy-paste-battlereport-p1"] = "In OGame ga je naar het bericht van het gevecht en opent het. Vervolgens klik je onderaan op de knop voor de gedetailleerde gevechtsrapport. In het nieuw geopened venster/popup selecteer je met je muis, of via ctrl+a als hij in een apart venster opent, het hele gevechtsrapport en kopieert het via rechtermuisklikt en dan kopi&euml;ren of via ctrl+c.";
+$lang["copy-paste-battlereport-p2"] = "Nu het gevechtsrapport gekopieerd is plak je het hier op de site in het meeste linkse tekstveld bovenaan. Vervolgens kan je het rapport converteren met de converteer knop of nog extra opties toevoegen, meer uitleg hierover volgt hieronder.";
+$lang["Add your raids"] = "Voeg je na-raids toe";
+$lang["copy-paste-raids"] = "todo";
+$lang["Add your harvest reports"] = "Voeg de puinrapporten toe";
+$lang["copy-paste-harvest"] = "todo";
+$lang["Enter your deuterium costs"] = "Voer de deuterium kosten in";
+$lang["copy-paste-deuterium"] = "todo";

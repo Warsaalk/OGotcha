@@ -20,6 +20,27 @@
  *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 ?>		
-		<div id="infopage">
-			<h2>Info</h2>
+		<div id="infopage" class="outer-block">
+			<div class="inner-block">
+				<h1><?= $self->getDict()->getVal("Info/Help") ?></h1>
+				<ul>
+					<li>
+						<h2><?= $self->getDict()->getVal("Copy Paste your battle report") ?></h2>
+						<p><?= $self->getDict()->getVal("copy-paste-battlereport-p1") ?></p>
+						<p><?= $self->getDict()->getVal("copy-paste-battlereport-p2") ?></p>
+					</li>
+					<li>
+						<h2><?= $self->getDict()->getVal("Add your raids") ?></h2>
+						<p><?= $self->getDict()->getVal("copy-paste-raids") ?></p>
+					</li>
+					<li>
+						<h2><?= $self->getDict()->getVal("Add your harvest reports") ?></h2>
+						<p><?= $self->getDict()->getVal("copy-paste-harvest") ?></p>
+					</li>
+					<li>
+						<h2><?= $self->getDict()->getVal("Enter your deuterium costs") ?></h2>
+						<p><?= $self->getDict()->getVal("copy-paste-deuterium") ?></p>
+					</li>
+				</ul>
+			</div>
 		</div>
