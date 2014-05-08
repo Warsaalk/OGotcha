@@ -95,6 +95,8 @@ textarea{ border: 0; padding: 5px; background: #000; color: #ddd; }
 	/*** Preview styles ***/
 	#preview-container{ margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
 	
+	#infopage { margin: 30px 0 20px; padding: 30px 30px 20px; background: #161920; }
+	
 	footer { margin: 0 auto; width: 950px; padding-bottom: 20px; }
 
 .info{ padding-bottom: 10px; }
