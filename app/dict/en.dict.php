@@ -21,6 +21,7 @@
  */
 
 $lang[""] = "";
+$lang["Info/Help"] = "Info/Help";
 $lang[" & "] = " & ";
 $lang["[TOT: %s] %s vs. %s (A: %s, D: %s)"] = "[TOT: %s] %s vs. %s (A: %s, D: %s)";
 $lang["Invalid post"] = "Invalid post";

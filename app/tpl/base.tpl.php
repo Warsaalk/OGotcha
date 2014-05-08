@@ -24,6 +24,7 @@
 <html>
 	<?= $self->tpl->head; ?>
 	<body>
+		<a id="info-sign" href="info"><span>?</span> <?= $self->getDict()->getVal("Info/Help") ?></a>
 		<div id="main-container">
 			<div id="lang">
 				<div id="lang-nl" class="lang<?= ($self->getMain()->getLang() == 'nl') ? ' lang-selected' : ''; ?>">
@@ -41,7 +42,7 @@
 				<div class="clear"></div>
 			</div>
 			<div id="header">
-				<h1><?= $self->getDict()->getVal("OGotcha") ?> </h1>
+				<h1><a href="home"><?= $self->getDict()->getVal("OGotcha") ?></a></h1>
 				<?php if($self->getMain()->getLang() == 'nl'){?>
 				<div id="agslord"><a href="ags_winstverdeler_2013.xlsx">AGS Winstverdeler van Lord</a></div>
 				<?php } ?>

@@ -21,6 +21,7 @@
  */
 
 $lang[""] = "";
+$lang["Info/Help"] = "Info/Help";
 $lang[" & "] = " & ";
 $lang["[TOT: %s] %s vs. %s (A: %s, D: %s)"] = "[TOT: %s] %s vs. %s (A: %s, V: %s)";
 $lang["Invalid post"] ="Je moet minstens een gevechtsrapport en skin meegeven.";
