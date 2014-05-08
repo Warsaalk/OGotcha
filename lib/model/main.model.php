@@ -252,9 +252,9 @@ class Main{
 				global $_COOKIE;
 				
 				if( $time != NULL )
-					setcookie( $name, $value, time() + $time );
+					setcookie( $name, $value, time() + $time, __BASE );
 				else
-					setcookie( $name, $value );
+					setcookie( $name, $value, 0, __BASE );
 				$_COOKIE[$name] = $value;
 		
 		}
