@@ -82,6 +82,21 @@ class View{
 	}
 	
 	/**
+	 * @param string $lang
+	 * @return string
+	 */
+	public function getLanguageLink( $lang ){
+		$lang = "/l-" . $lang;
+		$link = $_SERVER['REQUEST_URI'];
+		if( preg_match("/\/l-([a-z]+)$/i", $link) ){
+			$link = preg_replace("/\/l-([a-z]+)$/i", $lang, $link);
+		}else{
+			$link .= $lang;
+		}
+		return $link;
+	}
+	
+	/**
 	 * @param string $script
 	 * @param string $place
 	 */
@@ -162,7 +177,7 @@ class View{
 		$this->tpl->googleAnalytics 	= Parser::parse( $this, 'googleanalytics' );
 		$this->tpl->head 		= Parser::parse( $this, 'head' );
 		$this->tpl->footer 		= Parser::parse( $this, 'footer' );	
-		$this->tpl->page 		= Parser::parse( $this, $this->main->getPage() );
+		$this->tpl->page 		= Parser::parse( $this, $this->main->getPage(), __PAGE_TEMPLATE );
 
 			
 		return Parser::parse( $this, 'base' );

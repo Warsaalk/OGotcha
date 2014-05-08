@@ -27,13 +27,13 @@
 		<div id="main-container">
 			<div id="lang">
 				<div id="lang-nl" class="lang<?= ($self->getMain()->getLang() == 'nl') ? ' lang-selected' : ''; ?>">
-					<a href="nl">
+					<a href="<?= $self->getLanguageLink('nl') ?>">
 						<div><img src="<?= __IMAGES ?>flags/Netherlands-Flag.png" alt="Netherlands" /></div>
 						<div><?= $self->getDict()->getVal("Dutch") ?></div>
 					</a>
 				</div>
 				<div id="lang-en" class="lang<?= ($self->getMain()->getLang() == 'en') ? ' lang-selected' : ''; ?>">
-					<a href="en">
+					<a href="<?= $self->getLanguageLink('en') ?>">
 						<div><img src="<?= __IMAGES ?>flags/United-Kingdom-flag.png" /></div>
 						<div><?= $self->getDict()->getVal("English") ?></div>
 					</a>

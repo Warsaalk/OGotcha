@@ -23,6 +23,8 @@ AddHandler application/x-httpd-php .php .php3 .php4 .php5 .phtml .html .htm
 	RewriteEngine On
 	RewriteBase /git/ogame-converter
 	
-	RewriteRule ^([^/\.]+)$ ?l=$1 [L]
+	RewriteRule ^l-([^/\.]+)$ ?l=$1 [L]
+	RewriteRule ^([^/\.]+)/l-([^/\.]+)$ ?p=$1&l=$2 [L]
+	RewriteRule ^([^/\.]+)$ ?p=$1 [L]
 	RewriteRule ^public/$ ./ [R]
 </IfModule>
