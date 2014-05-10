@@ -91,6 +91,7 @@ class View{
 		if( preg_match("/\/l-([a-z]+)$/i", $link) ){
 			$link = preg_replace("/\/l-([a-z]+)$/i", $lang, $link);
 		}else{
+			if( substr( $link, -1 ) == '/' ) $lang = ltrim( $lang, '/' );
 			$link .= $lang;
 		}
 		return $link;
