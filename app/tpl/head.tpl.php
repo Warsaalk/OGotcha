@@ -25,6 +25,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 		
+		<meta name="description" content="An OGame combat report converter, OGotcha allows you to convert your combat reports so you can post them on the boards">
+		<meta name="keywords" content="ogame, gameforge, universeview, warsaalk, ogotcha, combat report, converter, kokx, origin, cr converter, ogame origin, ogotcha converter">
+		
+		<link rel="canonical" href="http://converter.dijkman-winters.nl/">
 		<title><?= $self->getDict()->getVal("OGotcha") ?></title>
 		<?= $self->get_value('css'); ?>
 		<?= $self->get_value('scripts_top'); ?>
