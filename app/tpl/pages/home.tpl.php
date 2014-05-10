@@ -31,7 +31,7 @@
 					<textarea name="report" id="cr-input" rows="24" cols="80"><?= $vl->getVariable('report','value') ?></textarea>
 				</div>
 				<div id="cr-right" class="cr-textareas">
-					<div id="cr-title"><span><?= $self->getDict()->getVal("Title:"); ?></span><input placeholder="<?= $self->getDict()->getVal("Title Placeholder") ?>" text" name="title" id="title" value="<?= $st->get('result-title') ?>" style="width: 350px;"></div>
+					<div id="cr-title"><span><?= $self->getDict()->getVal("Title:"); ?></span><input placeholder="<?= $self->getDict()->getVal("Title Placeholder") ?>" name="title" id="title" value="<?= $st->get('result-title') ?>" style="width: 350px;"></div>
 					<div class="clear"></div>
 					<textarea placeholder="<?= $self->getDict()->getVal("Result Placeholder") ?>" name="output" id="cr-output" rows="24" cols="80"><?= $st->get('result-content') ?></textarea>
 				</div>
