@@ -22,7 +22,7 @@
 
 define( '__VERSION'		, '3.0.0'	);
 define( '__BASE'		, '/git/ogame-converter/'			);
-define( '__BASE_URL'		, 'http://'.$_SERVER['HTTP_HOST'].__BASE 	);
+define( '__BASE_URL'		, '//'.$_SERVER['HTTP_HOST'].__BASE 	);
 define( '__TEMPLATE' 		, 'app/tpl/' 		);
 define( '__PAGE_TEMPLATE' 	, 'app/tpl/pages/'	);
 define( '__DICTIONARY' 		, 'app/dict/' 		);
