@@ -246,15 +246,16 @@ class Main{
 		 * @param string $name
 		 * @param string|int|boolean $value
 		 * @param int $time
+		 * @param string $path
 		 */
-		public function saveCookie( $name, $value, $time=NULL ){
+		public function saveCookie( $name, $value, $time=0, $path=__BASE ){
 			
 				global $_COOKIE;
 				
-				if( $time != NULL )
-					setcookie( $name, $value, time() + $time );
+				if( is_int($time) && $time != 0 )
+					setcookie( $name, $value, time() + $time, $path );
 				else
-					setcookie( $name, $value );
+					setcookie( $name, $value, 0, $path );
 				$_COOKIE[$name] = $value;
 		
 		}

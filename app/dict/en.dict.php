@@ -21,6 +21,7 @@
  */
 
 $lang[""] = "";
+$lang["Info/Help"] = "Info/Help";
 $lang[" & "] = " & ";
 $lang["[TOT: %s] %s vs. %s (A: %s, D: %s)"] = "[TOT: %s] %s vs. %s (A: %s, D: %s)";
 $lang["Invalid post"] = "Invalid post";
@@ -322,3 +323,17 @@ $lang["Destroyed!"] = "Destroyed!";
 
 #~ $lang[" units."] =
 #~ " Eenheden verloren.";
+/*** INFO page ***/
+$lang["Info"] = "Info";
+$lang["Help"] = "Help";
+$lang["Copy Paste your battle report"] = "Copy and paste your combat report";
+$lang["copy-paste-battlereport-p1"] = "In OGame go to the combat report message and open it. When you opened it click the \"Detailed combat report\" button. In the newly opened window/popup select the complete combat report with your mouse, or via ctrl+a if it opens in a new window, and copy it via right-click and copy or via Ctrl+c.";
+$lang["copy-paste-battlereport-p2"] = "Now that you have copied the combat report you can paste it in the textarea in the top left corner. When pasted you can convert the report by pressing the \"Convert\" button or add additional reports and options, which are explained below.";
+$lang["Add your raids"] = "Add your raids";
+$lang["copy-paste-raids-p1"] = "Copying your raids works the same way as copying a combat report. It's also possible to simply copy the loot line in the summary message of your combat report, so you don't have to copy the whole combat report.";
+$lang["copy-paste-raids-p2"] = "You can past the raids in the textarea in the \"Raids\" block, when you have more than one raid you can paste them underneath each other.";
+$lang["Add your harvest reports"] = "Add the harvest reports";
+$lang["copy-paste-harvest"] = "To copy your harvest report you need to open the report from your messages and select the content of the message (the report). When you have copied the report you can paste it in the harvest textarea in the correct column, when it's a harvest report of the attacker(s) in the attacker(s) column else in the defender(s) column. If you have more than one harvest report you can paste them underneath each other.";
+$lang["Enter your deuterium costs"] = "Add your deuterium costs";
+$lang["copy-paste-deuterium-p1"] = "The deuterium (fuel) costs have to be entered manualy in this format: \"[number] Deuterium\". Example: When your fleet needed 3 million units of deuterium you enter \"3.000.000 Deuterium\" in the deuterium textarea, don't forget the 'points' in the number.";
+$lang["copy-paste-deuterium-p2"] = "If there were multiple fleets, you send your fleet in waves or you want to enter the fuel costs of your recyclers, you can enter them underneath each other in the correct column.";

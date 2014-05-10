@@ -21,6 +21,7 @@
  */
 
 $lang[""] = "";
+$lang["Info/Help"] = "Info/Help";
 $lang[" & "] = " & ";
 $lang["[TOT: %s] %s vs. %s (A: %s, D: %s)"] = "[TOT: %s] %s vs. %s (A: %s, V: %s)";
 $lang["Invalid post"] ="Je moet minstens een gevechtsrapport en skin meegeven.";
@@ -146,7 +147,7 @@ $lang["After the battle"] =  "Na het gevecht...";
 $lang["Merge fleets of the same player"] ="Voeg vloten van dezelfde speler samen";
 
 #: application/modules/default/views/scripts/index/index.phtml:43
-$lang["Raids"] ="Naraids";
+$lang["Raids"] ="Na-raids";
 
 #: application/modules/default/views/scripts/index/index.phtml:48
 $lang["Harvest Reports"] ="Puinrapporten";
@@ -322,3 +323,18 @@ $lang["Destroyed!"] ="Vernietigd!";
 
 #~ $lang[" units."] =
 #~ " Eenheden verloren.";
+
+/*** INFO page ***/
+$lang["Info"] = "Info";
+$lang["Help"] = "Help";
+$lang["Copy Paste your battle report"] = "Kopieer en plak je gevechtsrapport";
+$lang["copy-paste-battlereport-p1"] = "In OGame ga je naar het bericht van het gevecht en opent het. Vervolgens klik je onderaan op de knop voor het gedetailleerde gevechtsrapport. In het nieuw geopened venster/popup selecteer je met je muis, of via ctrl+a als hij in een apart venster opent, het hele gevechtsrapport en kopieert het via rechtermuisklikt en dan kopi&euml;ren of via ctrl+c.";
+$lang["copy-paste-battlereport-p2"] = "Nu het gevechtsrapport gekopieerd is plak je het hier op de site in het meeste linkse tekstvak bovenaan. Vervolgens kan je het rapport converteren met de converteer knop of nog extra opties toevoegen, meer uitleg hierover volgt hieronder.";
+$lang["Add your raids"] = "Voeg je na-raids toe";
+$lang["copy-paste-raids-p1"] = "Het kopi&euml;ren van je na-raids werkt op dezelfde manier als het kopi&euml;ren van je gevechtsrapport. Hier heb je ook de mogelijkheid om in het overzichts bericht van je gevechtsrapport alleen de lijn van buit te kopi&euml;ren zodat je niet het hele gevechtsrapport moet gebruiken.";
+$lang["copy-paste-raids-p2"] = "De raids kan je plakken in het tekstvak in het Na-raids blok, indien je meerdere na-raids hebt kan je deze gewoon onder elkaar plaatsen.";
+$lang["Add your harvest reports"] = "Voeg de puinrapporten toe";
+$lang["copy-paste-harvest"] = "Voor het kopi&euml;ren van puinrapporten open je het rapport in je berichten en selecteer je de inhoud van het bericht (het rapport). Als je het rapport hebt gekopieerd plak je deze in het puinrapport tekstvak in de juiste kolom, indien het een puinrapport van de aanvaller(s) is in de aanvaller(s) kolom en anders in de verdediger(s) kolom. Wanneer je meerdere puinrapporten hebt plak je deze onder elkaar in het juiste tekstvak.";
+$lang["Enter your deuterium costs"] = "Voer de deuterium kosten in";
+$lang["copy-paste-deuterium-p1"] = "Het invoeren van je deuterium (brandstof) kosten moet je manueel doen in dit formaat: \"[getal] Deuterium\". Voorbeeld: Als je vloot 3 miljoen deuterium nodig had voor de vlucht geef je \"3.000.000 Deuterium\" in in het deuterium tekstvak, let er op dat je de 'punten' in je getal niet vergeet.";
+$lang["copy-paste-deuterium-p2"] = "Als er meerdere vloten waren, je vloot je in waves hebt gestuurd of de kosten van je Recyclers wilt ingeven kan je deze onder elkaar plaatsen in de juiste kolom.";

@@ -72,28 +72,8 @@ class Default_Renderer_Renderer
      * @return string
      */
 	public function translate() { 
-	
-			$n = func_num_args();
-			
-			if( $n > 0 ) {
-				
-				$s = func_get_arg( 0 );
-				$s = $this->dict->getVal( $s ); //Translate value
-			
-				if( $n > 1 ) {
-				
-						$args = func_get_args();
-						$args[0] = $s; //Replace original value with translated one
-				
-						return call_user_func_array( 'sprintf', $args );
-				
-				}
-				
-				return $s;
-			
-			}
-			
-			return 'no translation';
+		
+			return call_user_func_array(array($this->dict,'getVal'),func_get_args());
 			
 	}
 	
