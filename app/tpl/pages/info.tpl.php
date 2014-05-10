@@ -31,7 +31,8 @@
 					</li>
 					<li>
 						<h2><?= $self->getDict()->getVal("Add your raids") ?></h2>
-						<p><?= $self->getDict()->getVal("copy-paste-raids") ?></p>
+						<p><?= $self->getDict()->getVal("copy-paste-raids-p1") ?></p>
+						<p><?= $self->getDict()->getVal("copy-paste-raids-p2") ?></p>
 					</li>
 					<li>
 						<h2><?= $self->getDict()->getVal("Add your harvest reports") ?></h2>
@@ -39,7 +40,8 @@
 					</li>
 					<li>
 						<h2><?= $self->getDict()->getVal("Enter your deuterium costs") ?></h2>
-						<p><?= $self->getDict()->getVal("copy-paste-deuterium") ?></p>
+						<p><?= $self->getDict()->getVal("copy-paste-deuterium-p1") ?></p>
+						<p><?= $self->getDict()->getVal("copy-paste-deuterium-p2") ?></p>
 					</li>
 				</ul>
 			</div>
