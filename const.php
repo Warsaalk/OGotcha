@@ -20,7 +20,7 @@
  *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
 
-define( '__VERSION'		, '3.0.0'	);
+define( '__VERSION'		, '3.0.1'	);
 define( '__BASE'		, '/git/ogame-converter/'			);
 define( '__BASE_URL'		, '//'.$_SERVER['HTTP_HOST'].__BASE 	);
 define( '__TEMPLATE' 		, 'app/tpl/' 		);
