@@ -102,7 +102,7 @@ class Kokx_Reader_Raid
         
         if (count($advancedMatches) > 0) {
             foreach ($advancedMatches as $match) {
-                $raids[] = (new Default_Model_Raid(
+            	$raid = new Default_Model_Raid(
                     (float) str_replace('.', '', $match[1]), // Metal
                     (float) str_replace('.', '', $match[2]), // Cristal
                     (float) str_replace('.', '', $match[3]), // Deuterium
@@ -110,7 +110,8 @@ class Kokx_Reader_Raid
                     (float) str_replace('.', '', $match[5]), // Defender units losts
                     (float) str_replace('.', '', $match[6]), // Debris metal
                     (float) str_replace('.', '', $match[7])  // Debris kristal
-                ))->setAdvancedRaid();
+                );
+                $raids[] = $raid->setAdvancedRaid();
                 
             }
         } else {
