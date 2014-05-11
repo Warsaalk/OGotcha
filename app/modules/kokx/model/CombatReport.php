@@ -381,7 +381,15 @@ class Default_Model_CombatReport
      */
     public function getLossesAttacker()
     {
-        return $this->_lossesAttacker;
+    	$losses = $this->_lossesAttacker;
+    	
+    	foreach ($this->getRaids() as $raid) {
+	    	if( $raid->isAdvancedRaid() ){
+	    		$losses += $raid->getLossesAttacker();
+	    	}
+    	}
+    	
+        return $losses;
     }
 
     /**
@@ -405,7 +413,15 @@ class Default_Model_CombatReport
      */
     public function getLossesDefender()
     {
-        return $this->_lossesDefender;
+        $losses = $this->_lossesDefender;
+    	
+    	foreach ($this->getRaids() as $raid) {
+	    	if( $raid->isAdvancedRaid() ){
+	    		$losses += $raid->getLossesDefender();
+	    	}
+    	}
+    	
+        return $losses;
     }
 
     /**
