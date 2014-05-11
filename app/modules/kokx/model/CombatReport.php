@@ -447,7 +447,15 @@ class Default_Model_CombatReport
      */
     public function getDebrisMetal()
     {
-        return $this->_debrisMetal;
+    	$debris = $this->_debrisMetal;
+    	
+    	foreach ($this->getRaids() as $raid) {
+    		if( $raid->isAdvancedRaid() ){
+    			$debris += $raid->getDebrisMetal();
+    		}
+    	}
+    	
+        return $debris;
     }
 
     /**
@@ -457,7 +465,15 @@ class Default_Model_CombatReport
      */
     public function getDebrisCrystal()
     {
-        return $this->_debrisCrystal;
+    	$debris = $this->_debrisCrystal;
+    	
+    	foreach ($this->getRaids() as $raid) {
+    		if( $raid->isAdvancedRaid() ){
+    			$debris += $raid->getDebrisCrystal();
+    		}
+    	}
+    	
+        return $debris;
     }
 
     /**

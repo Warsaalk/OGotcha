@@ -175,7 +175,7 @@ class Default_Model_Raid
      *
      * @return int
      */
-    public function getDebrisCristal()
+    public function getDebrisCrystal()
     {
         return $this->_debrisCristal;
     }
