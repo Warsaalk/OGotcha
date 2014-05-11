@@ -77,7 +77,13 @@ class Default_Model_Raid
      */
     protected $_debrisCristal;
 
-
+    /**
+     * Advanced raid or not
+     * 
+     * @var boolean
+     */
+	protected $_advanced = false;
+    
     /**
      * Create the raid object.
      *
@@ -91,16 +97,17 @@ class Default_Model_Raid
      *
      * @return void
      */
-    public function __construct($metal, $crystal, $deuterium, $lossesAttacker, $lossesDefender, $debrisMetal = NULL, $debrisCristal = NULL)
+    public function __construct($metal, $crystal, $deuterium, $lossesAttacker = 0, $lossesDefender = 0, $debrisMetal = 0, $debrisCristal = 0)
     {
         $this->_metal          = $metal;
         $this->_crystal        = $crystal;
         $this->_deuterium      = $deuterium;
+        
         $this->_lossesAttacker = $lossesAttacker;
         $this->_lossesDefender = $lossesDefender;
         
-        if ($debrisMetal > 0) { $this->_debrisMetal = $debrisMetal; } else { $this->_debrisMetal = 0; }
-        if ($debrisCristal > 0) { $this->_debrisCristal = $debrisCristal; } else { $this->debrisCristal = 0; }
+        $this->_debrisMetal 	= $debrisMetal; 
+        $this->_debrisCristal 	= $debrisCristal;
     }
 
     /**
@@ -168,8 +175,27 @@ class Default_Model_Raid
      *
      * @return int
      */
-    public function getDebrisCristal()
+    public function getDebrisCrystal()
     {
         return $this->_debrisCristal;
+    }
+    
+    /**
+     * Set advanced raid
+     * 
+     * @return Default_Model_Raid
+     */
+    public function setAdvancedRaid(){
+    	$this->_advanced = true;
+    	return $this;
+    }
+    
+    /**
+     * Return if advanced raid
+     * 
+     * @return boolean
+     */
+    public function isAdvancedRaid(){
+    	return $this->_advanced;
     }
 }

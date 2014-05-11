@@ -28,7 +28,7 @@ $regexes['advanced_raid'] = 'De aanvaller heeft het gevecht gewonnen\!';
 $regexes['advanced_raid'] .= '\s*De aanvaller steelt ([0-9.]*) metaal, ([0-9.]*) kristal en ([0-9.]*) deuterium\.';
 $regexes['advanced_raid'] .= '\s*De aanvaller heeft een totaal van ([0-9.]*) eenheden verloren\.';
 $regexes['advanced_raid'] .= '\s*De verdediger heeft een totaal van ([0-9.]*) eenheden verloren\.';
-$regexes['advanced_raid'] .= '\s*Op deze co.*rdinaten in de ruimte zweven nu ([0-9.]*) metaal en ([0-9.]*) kristal\.';
+$regexes['advanced_raid'] .= '\s*Op deze co.*?rdinaten in de ruimte zweven nu ([0-9.]*) metaal en ([0-9.]*) kristal\.'; //[\x{00F6}]
 $regexes['simple_raid'] = '([0-9.]*) metaal, ([0-9.]*) kristal en ([0-9.]*) deuterium';
 
 //Harvest Regex

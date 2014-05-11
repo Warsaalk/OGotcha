@@ -188,7 +188,11 @@ class Default_Renderer_Renderer
         $this->data->totalDebrisAttackers = 0;
         $this->data->totalDebrisDefenders = 0;
 		$this->data->raidDeutRes = 0;
+		
+		$this->data->totalLossesAttacker = $this->_report->getLossesAttacker();
+		$this->data->totalLossesDefender = $this->_report->getLossesDefender();
 
+		//Harvest reports
         foreach ($this->_report->getAttackers()->getHarvestReports() as $hr) {
             $this->data->totalDebrisAttackers += $hr->getMetal() + $hr->getCrystal();
         }
@@ -196,6 +200,7 @@ class Default_Renderer_Renderer
         	$this->data->totalDebrisDefenders += $hr->getMetal() + $hr->getCrystal();
         }
 
+        //Raids
         $this->data->totalRaids = $this->_report->getMetal() + $this->_report->getCrystal() + $this->_report->getDeuterium();
         foreach ($this->_report->getRaids() as $raid) {
         	$this->data->totalRaids += $raid->getMetal() + $raid->getCrystal() + $raid->getDeuterium();
@@ -217,8 +222,8 @@ class Default_Renderer_Renderer
         }
         
         // calculate the result
-        $this->data->attackerResult = $this->data->totalDebrisAttackers + $this->data->totalRaids - $this->data->totalFuelAttackers - $this->_report->getLossesAttacker();
-        $this->data->defenderResult = $this->data->totalDebrisDefenders - $this->data->totalFuelDefenders - $this->_report->getLossesDefender();
+        $this->data->attackerResult = $this->data->totalDebrisAttackers + $this->data->totalRaids - $this->data->totalFuelAttackers - $this->data->totalLossesAttacker;
+        $this->data->defenderResult = $this->data->totalDebrisDefenders - $this->data->totalFuelDefenders - $this->data->totalLossesDefender;
         
         return 	$this->render('winnerloot')
                	. $this->render('lossesmoon')

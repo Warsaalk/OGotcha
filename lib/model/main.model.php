@@ -140,7 +140,7 @@ class Main{
 			$this->_lang = Language::getDefault();
 			if( isset( $_GET['l'] ) ){
 				$this->_lang 	= Language::validate( $_GET['l'] );
-				$this->saveCookie( 'language', $this->_lang );	
+				$this->saveCookie( 'language', $this->_lang, ( 60*60*24*365 ) );	
 			}
 			
 			foreach( $_GET as $id => $val ){
