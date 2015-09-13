@@ -45,7 +45,7 @@ $regexes['round'] = '(Aanvaller|Verdediger) (.*?)\s+\[([0-9]:[0-9]{1,3}:[0-9]{1,
 $regexes['round_start'] = 'Aanvaller';
 $regexes['round_fleet'] = '.*?(Aanvaller|Verdediger) ([^\n\r]*?)(\s*?\[([0-9]:[0-9]{1,3}:[0-9]{1,2})\])?';
 $regexes['round_fleet'] .= '(\s*?Wapens: ([0-9]{0,2})0% Schilden: ([0-9]{0,2})0% Pantser: ([0-9]{0,2})0%)?\s*';
-$regexes['round_fleet'] .= '(Soort([A-Za-z.-\s]*)\s*' . 'Aantal([0-9.\s]*).*?Wapens' . '|vernietigd.)\s*';
+$regexes['round_fleet'] .= '(Soort([A-Za-z.\-\s]*)\s*' . 'Aantal([0-9.\s]*).*?Wapens' . '|vernietigd.)\s*';
 $regexes['round_fleet'] .= '.*?(?=Aanvaller|Verdediger)';
 $regexes['battle_end'] = 'vernietigd.';
 $regexes['attacker'] = 'aanvaller';
