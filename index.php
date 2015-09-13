@@ -15,7 +15,7 @@
  *    You should have received a copy of the GNU General Public License
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   
- *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   This program is based on the Kokx's CR Converter ï¿½ 2009 kokx: https://github.com/kokx/kokx-converter
  *   
  *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
@@ -50,7 +50,7 @@ $main->handleModule( 'KokxModule' ); //Name of module class
 
 $main->addGoogleAnalytics( 'UA-46271379-4' );
 
-$main->addInfo( new Info( $main->getDict()->getVal('OGotcha release'), Info::INFORMATION ) );
+$main->addInfo( new Info( $main->getDict()->getVal('OGotcha release'), Info::WARNING ) );
 
 /**
  * Handle View

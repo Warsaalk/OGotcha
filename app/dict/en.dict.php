@@ -15,7 +15,7 @@
  *    You should have received a copy of the GNU General Public License
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- *   This program is based on the Kokx's CR Converter © 2009 kokx: https://github.com/kokx/kokx-converter
+ *   This program is based on the Kokx's CR Converter ï¿½ 2009 kokx: https://github.com/kokx/kokx-converter
  *   
  *   This file is not part of the original program and therefore it only inherits this copyright: Copyright (C) 2014 Klaas Van Parys
  */
@@ -48,7 +48,7 @@ $lang["Result Placeholder"] = "Here comes the converted CR";
 $lang["OGotcha"] = "OGotcha CR converter";
 
 $lang["OGotcha release"] = "Welkom bij de nieuwe OGotcha CR converter, deze is gebaseerd op de kokx CR converter, meer info volgt snel!";
-$lang["OGotcha release"] = "Welcome to the new OGotcha CR converter, it's based on the kokx CR converter, more info will follow soon!";
+$lang["OGotcha release"] = "Using <u>OGame version 6</u>? Go to <a href=\"https://ogotcha.universeview.be/\" style=\"color: red;\">ogotcha.universeview.be</a> the updated OGotcha converter for OGame 6+";
 
 #: data/translate/ids/ships.php:32
 $lang["Small Cargo"] = "Small Cargo";
